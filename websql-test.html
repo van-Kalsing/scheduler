@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <div>Здесь соеденяемся с webSQL database</div>
+        
+        <script type="text/javascript">
+            //подсоеденяемся к БД, если ее нет, то создаем
+            db = openDatabase("planer", "0.1", "A list of to do items.", 200000);
+                //проверяем, удалось ли соедениться
+                if(!db){alert("Failed to connect to database.");}
+            
+            //создаем все необходимые таблицы
+            db.transaction(function(tx) {
+            tx.executeSql("CREATE TABLE task (task_id  INTEGER NULL, task_name  VARCHAR(20) NULL, short_task_name  VARCHAR(20) NULL, duration  INTEGER NULL, work_id  INTEGER NULL,priority  INTEGER NULL)", [], null, null);
+            });
+            
+            //вставляем в нее запись
+            db.transaction(function(tx) {
+            tx.executeSql("insert into task (task_id, task_name, short_task_name, duration, work_id, priority) values (?,?,?,?,?,?)", ["1", "Тестовая запись", "ТЗ", "15", "1", "7"], null, function(tx, error){ alert(error); });
+            });
+            db.transaction(function(tx) {
+            tx.executeSql("insert into task (task_id, task_name, short_task_name, duration, work_id, priority) values (?,?,?,?,?,?)", ["2", "Тестовая запись #2", "ТЗ2", "315", "1", "3"], null, function(tx, error){ alert(error); });
+            });
+            
+            //а теперь просто выведем эту запись
+            db.transaction(function(tx) {
+            tx.executeSql("SELECT task_id, task_name, short_task_name FROM task", [], function(tx, result) {
+													for(var i = 0; i < result.rows.length; i++) {
+													document.write('<b>' + result.rows.item(i)['task_name'] + '</b><br />');
+													}}, null)});  
+            
+        </script>
+                                                                        
+            
+    </body>
+</html>

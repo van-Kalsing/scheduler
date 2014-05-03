@@ -1,0 +1,907 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Создано Microsoft Visio, экспорт SVG 4Категории работ.svg Страница-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="11.6929in" height="16.0354in"
+		viewBox="0 0 841.889 1154.55" xml:space="preserve" color-interpolation-filters="sRGB" class="st18">
+	<v:documentProperties v:langID="1049">
+		<v:userDefs>
+			<v:ud v:nameU="msvSubprocessMaster" v:prompt="" v:val="VT4(Rectangle)"/>
+			<v:ud v:nameU="msvNoAutoConnect" v:val="VT0(1):26"/>
+		</v:userDefs>
+	</v:documentProperties>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {visibility:visible}
+		.st2 {fill:#5b9bd5;fill-opacity:0.22;filter:url(#filter_2);stroke:#5b9bd5;stroke-opacity:0.22}
+		.st3 {fill:#2e75b5;stroke:#c7c8c8;stroke-width:0.25}
+		.st4 {fill:#feffff;font-family:Calibri;font-size:1.99999em;font-weight:bold}
+		.st5 {fill:#feffff;font-family:Calibri;font-size:1.5em;font-weight:bold}
+		.st6 {fill:#a5a5a5;stroke:#c7c8c8;stroke-width:0.25}
+		.st7 {fill:#000000;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st8 {fill:#ffffff;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24;visibility:hidden}
+		.st9 {stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.239976}
+		.st10 {fill:#000000;font-family:Calibri;font-size:0.666664em}
+		.st11 {fill:#dde2cd}
+		.st12 {stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st13 {stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st14 {fill:#ffffff;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24;visibility:hidden}
+		.st15 {fill:#fee599;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st16 {fill:#000000;font-family:Calibri;font-size:1.00001em}
+		.st17 {font-size:1em}
+		.st18 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<defs id="Filters">
+		<filter id="filter_2">
+			<feGaussianBlur stdDeviation="2"/>
+		</filter>
+	</defs>
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<v:custProps>
+			<v:cp v:nameU="AskOnDrop" v:lbl="Спрашивать при размещении" v:type="3" v:sortKey="visXAsk" v:langID="1049"
+					v:val="VT0(1):5"/>
+		</v:custProps>
+		<v:userDefs>
+			<v:ud v:nameU="msvThemeOrder" v:val="VT0(0):26"/>
+		</v:userDefs>
+		<title>Страница-1</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50393"
+				v:shadowOffsetY="-8.50393"/>
+		<v:layer v:name="Соединительная линия" v:index="0"/>
+		<g id="shape1-1" v:mID="1" v:groupContext="shape" transform="translate(56.6928,-1055.91)">
+			<title>Скругленный прямоугольник</title>
+			<desc>Календарь</desc>
+			<v:userDefs>
+				<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(3.99999,3.99999,3.99999,3.99999)" v:tabSpace="42.5196"/>
+			<v:textRect cx="109.843" cy="1104.94" width="219.69" height="99.2125"/>
+			<g id="shadow1-2" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<path d="M21.97 1154.55 L197.72 1154.55 A21.9681 21.9681 -180 0 0 219.69 1132.58 L219.69 1077.31 A21.9681 21.9681
+							 -180 0 0 197.72 1055.34 L21.97 1055.34 A21.9681 21.9681 -180 0 0 -0 1077.31 L0 1132.58 A21.9681 21.9681
+							 -180 0 0 21.97 1154.55 Z" class="st2"/>
+			</g>
+			<path d="M21.97 1154.55 L197.72 1154.55 A21.9681 21.9681 -180 0 0 219.69 1132.58 L219.69 1077.31 A21.9681 21.9681 -180
+						 0 0 197.72 1055.34 L21.97 1055.34 A21.9681 21.9681 -180 0 0 -0 1077.31 L0 1132.58 A21.9681 21.9681 -180
+						 0 0 21.97 1154.55 Z" class="st3"/>
+			<text x="52.98" y="1112.14" class="st4" v:langID="1049"><v:paragraph v:horizAlign="1"/><v:tabList/>Календарь</text>		</g>
+		<g id="shape2-7" v:mID="2" v:groupContext="shape" transform="translate(308.268,-1055.91)">
+			<title>Скругленный прямоугольник.2</title>
+			<desc>Сетевой график</desc>
+			<v:userDefs>
+				<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(3.99999,3.99999,3.99999,3.99999)" v:tabSpace="42.5196"/>
+			<v:textRect cx="109.843" cy="1104.94" width="219.69" height="99.2125"/>
+			<g id="shadow2-8" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<path d="M21.97 1154.55 L197.72 1154.55 A21.9681 21.9681 -180 0 0 219.69 1132.58 L219.69 1077.31 A21.9681 21.9681
+							 -180 0 0 197.72 1055.34 L21.97 1055.34 A21.9681 21.9681 -180 0 0 -0 1077.31 L0 1132.58 A21.9681 21.9681
+							 -180 0 0 21.97 1154.55 Z" class="st2"/>
+			</g>
+			<path d="M21.97 1154.55 L197.72 1154.55 A21.9681 21.9681 -180 0 0 219.69 1132.58 L219.69 1077.31 A21.9681 21.9681 -180
+						 0 0 197.72 1055.34 L21.97 1055.34 A21.9681 21.9681 -180 0 0 -0 1077.31 L0 1132.58 A21.9681 21.9681 -180
+						 0 0 21.97 1154.55 Z" class="st3"/>
+			<text x="27.62" y="1112.14" class="st4" v:langID="1049"><v:paragraph v:horizAlign="1"/><v:tabList/>Сетевой график</text>		</g>
+		<g id="shape3-13" v:mID="3" v:groupContext="shape" transform="translate(559.842,-1055.91)">
+			<title>Скругленный прямоугольник.3</title>
+			<desc>График сгорания</desc>
+			<v:userDefs>
+				<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(3.99999,3.99999,3.99999,3.99999)" v:tabSpace="42.5196"/>
+			<v:textRect cx="109.843" cy="1104.94" width="219.69" height="99.2125"/>
+			<g id="shadow3-14" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<path d="M21.97 1154.55 L197.72 1154.55 A21.9681 21.9681 -180 0 0 219.69 1132.58 L219.69 1077.31 A21.9681 21.9681
+							 -180 0 0 197.72 1055.34 L21.97 1055.34 A21.9681 21.9681 -180 0 0 -0 1077.31 L0 1132.58 A21.9681 21.9681
+							 -180 0 0 21.97 1154.55 Z" class="st2"/>
+			</g>
+			<path d="M21.97 1154.55 L197.72 1154.55 A21.9681 21.9681 -180 0 0 219.69 1132.58 L219.69 1077.31 A21.9681 21.9681 -180
+						 0 0 197.72 1055.34 L21.97 1055.34 A21.9681 21.9681 -180 0 0 -0 1077.31 L0 1132.58 A21.9681 21.9681 -180
+						 0 0 21.97 1154.55 Z" class="st3"/>
+			<text x="21.57" y="1112.14" class="st4" v:langID="1049"><v:paragraph v:horizAlign="1"/><v:tabList/>График сгорания</text>		</g>
+		<g id="shape41-19" v:mID="41" v:groupContext="shape" transform="translate(60.2362,-997.321)">
+			<title>Скругленный прямоугольник.92</title>
+			<desc>Календарь</desc>
+			<v:userDefs>
+				<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(3.99999,3.99999,3.99999,3.99999)" v:tabSpace="42.5196"/>
+			<v:textRect cx="52.44" cy="1130.92" width="104.89" height="47.2453"/>
+			<g id="shadow41-20" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<path d="M10.49 1154.55 L94.39 1154.55 A10.4878 10.4613 -180 0 0 104.88 1144.09 L104.88 1117.77 A10.4878 10.4613
+							 -180 0 0 94.39 1107.3 L10.49 1107.3 A10.4878 10.4613 -180 0 0 -0 1117.77 L0 1144.09 A10.4878 10.4613
+							 -180 0 0 10.49 1154.55 Z" class="st2"/>
+			</g>
+			<path d="M10.49 1154.55 L94.39 1154.55 A10.4878 10.4613 -180 0 0 104.88 1144.09 L104.88 1117.77 A10.4878 10.4613 -180
+						 0 0 94.39 1107.3 L10.49 1107.3 A10.4878 10.4613 -180 0 0 -0 1117.77 L0 1144.09 A10.4878 10.4613 -180 0 0
+						 10.49 1154.55 Z" class="st3"/>
+			<text x="25.61" y="1136.32" class="st5" v:langID="1049"><v:paragraph v:horizAlign="1"/><v:tabList/>Строка</text>		</g>
+		<g id="shape42-25" v:mID="42" v:groupContext="shape" transform="translate(173.622,-996.379)">
+			<title>Скругленный прямоугольник.93</title>
+			<desc>Сетевой график</desc>
+			<v:userDefs>
+				<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(3.99999,3.99999,3.99999,3.99999)" v:tabSpace="42.5196"/>
+			<v:textRect cx="53.1486" cy="1130.45" width="106.3" height="48.1875"/>
+			<g id="shadow42-26" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<path d="M10.63 1154.55 L95.67 1154.55 A10.6295 10.6699 -180 0 0 106.3 1143.88 L106.3 1117.03 A10.6295 10.6699 -180
+							 0 0 95.67 1106.36 L10.63 1106.36 A10.6295 10.6699 -180 0 0 -0 1117.03 L0 1143.88 A10.6295 10.6699 -180
+							 0 0 10.63 1154.55 Z" class="st2"/>
+			</g>
+			<path d="M10.63 1154.55 L95.67 1154.55 A10.6295 10.6699 -180 0 0 106.3 1143.88 L106.3 1117.03 A10.6295 10.6699 -180 0
+						 0 95.67 1106.36 L10.63 1106.36 A10.6295 10.6699 -180 0 0 -0 1117.03 L0 1143.88 A10.6295 10.6699 -180 0 0
+						 10.63 1154.55 Z" class="st3"/>
+			<text x="15.14" y="1135.85" class="st5" v:langID="1049"><v:paragraph v:horizAlign="1"/><v:tabList/>Обычный</text>		</g>
+		<g id="shape43-31" v:mID="43" v:groupContext="shape" transform="translate(308.268,-996.379)">
+			<title>Скругленный прямоугольник.130</title>
+			<desc>Сетевой график</desc>
+			<v:userDefs>
+				<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(3.99999,3.99999,3.99999,3.99999)" v:tabSpace="42.5196"/>
+			<v:textRect cx="109.841" cy="1130.45" width="219.69" height="48.1875"/>
+			<g id="shadow43-32" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<path d="M21.97 1154.55 L197.72 1154.55 A21.9676 10.6699 -180 0 0 219.69 1143.88 L219.69 1117.03 A21.9676 10.6699
+							 -180 0 0 197.72 1106.36 L21.97 1106.36 A21.9676 10.6699 -180 0 0 0 1117.03 L0 1143.88 A21.9676 10.6699
+							 -180 0 0 21.97 1154.55 Z" class="st2"/>
+			</g>
+			<path d="M21.97 1154.55 L197.72 1154.55 A21.9676 10.6699 -180 0 0 219.69 1143.88 L219.69 1117.03 A21.9676 10.6699 -180
+						 0 0 197.72 1106.36 L21.97 1106.36 A21.9676 10.6699 -180 0 0 0 1117.03 L0 1143.88 A21.9676 10.6699 -180 0
+						 0 21.97 1154.55 Z" class="st6"/>
+			<text x="44.97" y="1135.85" class="st5" v:langID="1049"><v:paragraph v:horizAlign="1"/><v:tabList/>Категории работ</text>		</g>
+		<g id="shape45-37" v:mID="45" v:groupContext="shape" transform="translate(559.843,-996.379)">
+			<title>Скругленный прямоугольник.133</title>
+			<desc>Сетевой график</desc>
+			<v:userDefs>
+				<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(3.99999,3.99999,3.99999,3.99999)" v:tabSpace="42.5196"/>
+			<v:textRect cx="109.841" cy="1130.45" width="219.69" height="48.1875"/>
+			<g id="shadow45-38" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<path d="M21.97 1154.55 L197.72 1154.55 A21.9676 10.6699 -180 0 0 219.69 1143.88 L219.69 1117.03 A21.9676 10.6699
+							 -180 0 0 197.72 1106.36 L21.97 1106.36 A21.9676 10.6699 -180 0 0 0 1117.03 L0 1143.88 A21.9676 10.6699
+							 -180 0 0 21.97 1154.55 Z" class="st2"/>
+			</g>
+			<path d="M21.97 1154.55 L197.72 1154.55 A21.9676 10.6699 -180 0 0 219.69 1143.88 L219.69 1117.03 A21.9676 10.6699 -180
+						 0 0 197.72 1106.36 L21.97 1106.36 A21.9676 10.6699 -180 0 0 0 1117.03 L0 1143.88 A21.9676 10.6699 -180 0
+						 0 21.97 1154.55 Z" class="st3"/>
+			<text x="64.07" y="1135.85" class="st5" v:langID="1049"><v:paragraph v:horizAlign="1"/><v:tabList/>Материалы</text>		</g>
+		<g id="group54-43" transform="translate(322.835,-785.827)" v:mID="54" v:groupContext="group">
+			<v:custProps>
+				<v:cp v:nameU="Number" v:lbl="Узел" v:type="0" v:sortKey="visNode0" v:langID="1049" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<title>Узел</title>
+			<g id="shape55-44" v:mID="55" v:groupContext="shape">
+				<title>Лист.55</title>
+				<path d="M0 1146.67 A7.87402 7.87402 0 0 1 15.75 1146.67 A7.87402 7.87402 0 1 1 0 1146.67 Z" class="st7"/>
+			</g>
+			<g id="shape56-46" v:mID="56" v:groupContext="shape" transform="translate(17.3228,-1.07223)">
+				<title>Лист.56</title>
+				<v:textBlock v:margins="rect(2,2,2,2)"/>
+				<v:textRect cx="32" cy="1147.75" width="64" height="13.6036"/>
+				<rect x="0" y="1140.95" width="64" height="13.6036" class="st8"/>
+			</g>
+		</g>
+		<g id="shape57-48" v:mID="57" v:groupContext="shape" v:layerMember="0"
+				transform="translate(1366.72,876.356) rotate(120.319)">
+			<title>Односторонняя соединительная линия</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 1154.55 L77.99 1154.55" class="st9"/>
+		</g>
+		<g id="group58-51" transform="translate(350.394,-841.339)" v:mID="58" v:groupContext="group">
+			<v:custProps>
+				<v:cp v:nameU="Number" v:lbl="Узел" v:type="0" v:sortKey="visNode0" v:langID="1049" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<title>Узел.58</title>
+			<g id="shape59-52" v:mID="59" v:groupContext="shape">
+				<title>Лист.59</title>
+				<path d="M0 1134.86 A19.685 19.685 0 0 1 39.37 1134.86 A19.685 19.685 0 1 1 0 1134.86 Z" class="st7"/>
+			</g>
+			<g id="shape60-54" v:mID="60" v:groupContext="shape" transform="translate(43.3071,-12.8833)">
+				<title>Лист.60</title>
+				<v:textBlock v:margins="rect(2,2,2,2)"/>
+				<v:textRect cx="32" cy="1147.75" width="64" height="13.6036"/>
+				<rect x="0" y="1140.95" width="64" height="13.6036" class="st8"/>
+			</g>
+		</g>
+		<g id="group61-56" transform="translate(559.055,-890.945)" v:mID="61" v:groupContext="group">
+			<v:custProps>
+				<v:cp v:nameU="Number" v:lbl="Узел" v:type="0" v:sortKey="visNode0" v:langID="1049" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<title>Узел.61</title>
+			<g id="shape62-57" v:mID="62" v:groupContext="shape">
+				<title>Лист.62</title>
+				<path d="M0 1134.86 A19.685 19.685 0 0 1 39.37 1134.86 A19.685 19.685 0 1 1 0 1134.86 Z" class="st7"/>
+			</g>
+			<g id="shape63-59" v:mID="63" v:groupContext="shape" transform="translate(43.3071,-12.8833)">
+				<title>Лист.63</title>
+				<v:textBlock v:margins="rect(2,2,2,2)"/>
+				<v:textRect cx="32" cy="1147.75" width="64" height="13.6036"/>
+				<rect x="0" y="1140.95" width="64" height="13.6036" class="st8"/>
+			</g>
+		</g>
+		<g id="group64-61" transform="translate(114.173,-912.205)" v:mID="64" v:groupContext="group">
+			<v:custProps>
+				<v:cp v:nameU="Number" v:lbl="Узел" v:type="0" v:sortKey="visNode0" v:langID="1049" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<title>Узел.64</title>
+			<g id="shape65-62" v:mID="65" v:groupContext="shape">
+				<title>Лист.65</title>
+				<path d="M0 1134.86 A19.685 19.685 0 0 1 39.37 1134.86 A19.685 19.685 0 1 1 0 1134.86 Z" class="st7"/>
+			</g>
+			<g id="shape66-64" v:mID="66" v:groupContext="shape" transform="translate(43.3071,-12.8833)">
+				<title>Лист.66</title>
+				<v:textBlock v:margins="rect(2,2,2,2)"/>
+				<v:textRect cx="32" cy="1147.75" width="64" height="13.6036"/>
+				<rect x="0" y="1140.95" width="64" height="13.6036" class="st8"/>
+			</g>
+		</g>
+		<g id="group67-66" transform="translate(724.409,-727.953)" v:mID="67" v:groupContext="group">
+			<v:custProps>
+				<v:cp v:nameU="Number" v:lbl="Узел" v:type="0" v:sortKey="visNode0" v:langID="1049" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<title>Узел.67</title>
+			<g id="shape68-67" v:mID="68" v:groupContext="shape">
+				<title>Лист.68</title>
+				<path d="M0 1134.86 A19.685 19.685 0 0 1 39.37 1134.86 A19.685 19.685 0 1 1 0 1134.86 Z" class="st7"/>
+			</g>
+			<g id="shape69-69" v:mID="69" v:groupContext="shape" transform="translate(43.3071,-12.8833)">
+				<title>Лист.69</title>
+				<v:textBlock v:margins="rect(2,2,2,2)"/>
+				<v:textRect cx="32" cy="1147.75" width="64" height="13.6036"/>
+				<rect x="0" y="1140.95" width="64" height="13.6036" class="st8"/>
+			</g>
+		</g>
+		<g id="group70-71" transform="translate(204.724,-731.496)" v:mID="70" v:groupContext="group">
+			<v:custProps>
+				<v:cp v:nameU="Number" v:lbl="Узел" v:type="0" v:sortKey="visNode0" v:langID="1049" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<title>Узел.70</title>
+			<g id="shape71-72" v:mID="71" v:groupContext="shape">
+				<title>Лист.71</title>
+				<path d="M0 1134.86 A19.685 19.685 0 0 1 39.37 1134.86 A19.685 19.685 0 1 1 0 1134.86 Z" class="st7"/>
+			</g>
+			<g id="shape72-74" v:mID="72" v:groupContext="shape" transform="translate(43.3071,-12.8833)">
+				<title>Лист.72</title>
+				<v:textBlock v:margins="rect(2,2,2,2)"/>
+				<v:textRect cx="32" cy="1147.75" width="64" height="13.6036"/>
+				<rect x="0" y="1140.95" width="64" height="13.6036" class="st8"/>
+			</g>
+		</g>
+		<g id="group73-76" transform="translate(464.567,-863.78)" v:mID="73" v:groupContext="group">
+			<v:custProps>
+				<v:cp v:nameU="Number" v:lbl="Узел" v:type="0" v:sortKey="visNode0" v:langID="1049" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<title>Узел.73</title>
+			<g id="shape74-77" v:mID="74" v:groupContext="shape">
+				<title>Лист.74</title>
+				<path d="M0 1146.67 A7.87402 7.87402 0 0 1 15.75 1146.67 A7.87402 7.87402 0 1 1 0 1146.67 Z" class="st7"/>
+			</g>
+			<g id="shape75-79" v:mID="75" v:groupContext="shape" transform="translate(17.3228,-1.07223)">
+				<title>Лист.75</title>
+				<v:textBlock v:margins="rect(2,2,2,2)"/>
+				<v:textRect cx="32" cy="1147.75" width="64" height="13.6036"/>
+				<rect x="0" y="1140.95" width="64" height="13.6036" class="st8"/>
+			</g>
+		</g>
+		<g id="group76-81" transform="translate(399.805,-716.554)" v:mID="76" v:groupContext="group">
+			<v:custProps>
+				<v:cp v:nameU="Number" v:lbl="Узел" v:type="0" v:sortKey="visNode0" v:langID="1049" v:val="VT4()"/>
+				<v:cp v:nameU="Number" v:lbl="" v:prompt="" v:type="0" v:format="" v:sortKey="" v:invis="false" v:ask="false"
+						v:langID="0" v:cal="0" v:val="VT4(1)"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<title>Узел.76</title>
+			<g id="shape77-82" v:mID="77" v:groupContext="shape">
+				<title>Лист.77</title>
+				<path d="M0 1146.67 A7.87402 7.87402 0 0 1 15.75 1146.67 A7.87402 7.87402 0 1 1 0 1146.67 Z" class="st7"/>
+			</g>
+			<g id="shape78-84" v:mID="78" v:groupContext="shape" transform="translate(17.3228,-1.07223)">
+				<title>Лист.78</title>
+				<v:textBlock v:margins="rect(2,2,2,2)"/>
+				<v:textRect cx="32" cy="1147.75" width="64" height="13.6036"/>
+				<rect x="0" y="1140.95" width="64" height="13.6036" class="st8"/>
+				<text x="2" y="1150.15" class="st10" v:langID="1049"><v:paragraph/><v:tabList/>1</text>			</g>
+		</g>
+		<g id="group79-87" transform="translate(559.055,-807.087)" v:mID="79" v:groupContext="group">
+			<v:custProps>
+				<v:cp v:nameU="Number" v:lbl="Узел" v:type="0" v:sortKey="visNode0" v:langID="1049" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<title>Узел.79</title>
+			<g id="shape80-88" v:mID="80" v:groupContext="shape">
+				<title>Лист.80</title>
+				<path d="M0 1146.67 A7.87402 7.87402 0 0 1 15.75 1146.67 A7.87402 7.87402 0 1 1 0 1146.67 Z" class="st7"/>
+			</g>
+			<g id="shape81-90" v:mID="81" v:groupContext="shape" transform="translate(17.3228,-1.07223)">
+				<title>Лист.81</title>
+				<v:textBlock v:margins="rect(2,2,2,2)"/>
+				<v:textRect cx="32" cy="1147.75" width="64" height="13.6036"/>
+				<rect x="0" y="1140.95" width="64" height="13.6036" class="st8"/>
+			</g>
+		</g>
+		<g id="group82-92" transform="translate(661.417,-821.26)" v:mID="82" v:groupContext="group">
+			<v:custProps>
+				<v:cp v:nameU="Number" v:lbl="Узел" v:type="0" v:sortKey="visNode0" v:langID="1049" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<title>Узел.82</title>
+			<g id="shape83-93" v:mID="83" v:groupContext="shape">
+				<title>Лист.83</title>
+				<path d="M0 1146.67 A7.87402 7.87402 0 0 1 15.75 1146.67 A7.87402 7.87402 0 1 1 0 1146.67 Z" class="st7"/>
+			</g>
+			<g id="shape84-95" v:mID="84" v:groupContext="shape" transform="translate(17.3228,-1.07223)">
+				<title>Лист.84</title>
+				<v:textBlock v:margins="rect(2,2,2,2)"/>
+				<v:textRect cx="32" cy="1147.75" width="64" height="13.6036"/>
+				<rect x="0" y="1140.95" width="64" height="13.6036" class="st8"/>
+			</g>
+		</g>
+		<g id="group85-97" transform="translate(692.913,-934.646)" v:mID="85" v:groupContext="group">
+			<v:custProps>
+				<v:cp v:nameU="Number" v:lbl="Узел" v:type="0" v:sortKey="visNode0" v:langID="1049" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<title>Узел.85</title>
+			<g id="shape86-98" v:mID="86" v:groupContext="shape">
+				<title>Лист.86</title>
+				<path d="M0 1146.67 A7.87402 7.87402 0 0 1 15.75 1146.67 A7.87402 7.87402 0 1 1 0 1146.67 Z" class="st7"/>
+			</g>
+			<g id="shape87-100" v:mID="87" v:groupContext="shape" transform="translate(17.3228,-1.07223)">
+				<title>Лист.87</title>
+				<v:textBlock v:margins="rect(2,2,2,2)"/>
+				<v:textRect cx="32" cy="1147.75" width="64" height="13.6036"/>
+				<rect x="0" y="1140.95" width="64" height="13.6036" class="st8"/>
+			</g>
+		</g>
+		<g id="group88-102" transform="translate(503.937,-955.906)" v:mID="88" v:groupContext="group">
+			<v:custProps>
+				<v:cp v:nameU="Number" v:lbl="Узел" v:type="0" v:sortKey="visNode0" v:langID="1049" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<title>Узел.88</title>
+			<g id="shape89-103" v:mID="89" v:groupContext="shape">
+				<title>Лист.89</title>
+				<path d="M0 1146.67 A7.87402 7.87402 0 0 1 15.75 1146.67 A7.87402 7.87402 0 1 1 0 1146.67 Z" class="st7"/>
+			</g>
+			<g id="shape90-105" v:mID="90" v:groupContext="shape" transform="translate(17.3228,-1.07223)">
+				<title>Лист.90</title>
+				<v:textBlock v:margins="rect(2,2,2,2)"/>
+				<v:textRect cx="32" cy="1147.75" width="64" height="13.6036"/>
+				<rect x="0" y="1140.95" width="64" height="13.6036" class="st8"/>
+			</g>
+		</g>
+		<g id="group91-107" transform="translate(165.354,-828.346)" v:mID="91" v:groupContext="group">
+			<v:custProps>
+				<v:cp v:nameU="Number" v:lbl="Узел" v:type="0" v:sortKey="visNode0" v:langID="1049" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<title>Узел.91</title>
+			<g id="shape92-108" v:mID="92" v:groupContext="shape">
+				<title>Лист.92</title>
+				<path d="M0 1146.67 A7.87402 7.87402 0 0 1 15.75 1146.67 A7.87402 7.87402 0 1 1 0 1146.67 Z" class="st7"/>
+			</g>
+			<g id="shape93-110" v:mID="93" v:groupContext="shape" transform="translate(17.3228,-1.07223)">
+				<title>Лист.93</title>
+				<v:textBlock v:margins="rect(2,2,2,2)"/>
+				<v:textRect cx="32" cy="1147.75" width="64" height="13.6036"/>
+				<rect x="0" y="1140.95" width="64" height="13.6036" class="st8"/>
+			</g>
+		</g>
+		<g id="group94-112" transform="translate(220.472,-948.819)" v:mID="94" v:groupContext="group">
+			<v:custProps>
+				<v:cp v:nameU="Number" v:lbl="Узел" v:type="0" v:sortKey="visNode0" v:langID="1049" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<title>Узел.94</title>
+			<g id="shape95-113" v:mID="95" v:groupContext="shape">
+				<title>Лист.95</title>
+				<path d="M0 1146.67 A7.87402 7.87402 0 0 1 15.75 1146.67 A7.87402 7.87402 0 1 1 0 1146.67 Z" class="st7"/>
+			</g>
+			<g id="shape96-115" v:mID="96" v:groupContext="shape" transform="translate(17.3228,-1.07223)">
+				<title>Лист.96</title>
+				<v:textBlock v:margins="rect(2,2,2,2)"/>
+				<v:textRect cx="32" cy="1147.75" width="64" height="13.6036"/>
+				<rect x="0" y="1140.95" width="64" height="13.6036" class="st8"/>
+			</g>
+		</g>
+		<g id="group97-117" transform="translate(70.8661,-955.906)" v:mID="97" v:groupContext="group">
+			<v:custProps>
+				<v:cp v:nameU="Number" v:lbl="Узел" v:type="0" v:sortKey="visNode0" v:langID="1049" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<title>Узел.97</title>
+			<g id="shape98-118" v:mID="98" v:groupContext="shape">
+				<title>Лист.98</title>
+				<path d="M0 1146.67 A7.87402 7.87402 0 0 1 15.75 1146.67 A7.87402 7.87402 0 1 1 0 1146.67 Z" class="st7"/>
+			</g>
+			<g id="shape99-120" v:mID="99" v:groupContext="shape" transform="translate(17.3228,-1.07223)">
+				<title>Лист.99</title>
+				<v:textBlock v:margins="rect(2,2,2,2)"/>
+				<v:textRect cx="32" cy="1147.75" width="64" height="13.6036"/>
+				<rect x="0" y="1140.95" width="64" height="13.6036" class="st8"/>
+			</g>
+		</g>
+		<g id="group100-122" transform="translate(118.11,-736.22)" v:mID="100" v:groupContext="group">
+			<v:custProps>
+				<v:cp v:nameU="Number" v:lbl="Узел" v:type="0" v:sortKey="visNode0" v:langID="1049" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<title>Узел.100</title>
+			<g id="shape101-123" v:mID="101" v:groupContext="shape">
+				<title>Лист.101</title>
+				<path d="M0 1146.67 A7.87402 7.87402 0 0 1 15.75 1146.67 A7.87402 7.87402 0 1 1 0 1146.67 Z" class="st7"/>
+			</g>
+			<g id="shape102-125" v:mID="102" v:groupContext="shape" transform="translate(17.3228,-1.07223)">
+				<title>Лист.102</title>
+				<v:textBlock v:margins="rect(2,2,2,2)"/>
+				<v:textRect cx="32" cy="1147.75" width="64" height="13.6036"/>
+				<rect x="0" y="1140.95" width="64" height="13.6036" class="st8"/>
+			</g>
+		</g>
+		<g id="group106-127" transform="translate(362.205,-955.906)" v:mID="106" v:groupContext="group">
+			<v:custProps>
+				<v:cp v:nameU="Number" v:lbl="Узел" v:type="0" v:sortKey="visNode0" v:langID="1049" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<title>Узел.106</title>
+			<g id="shape107-128" v:mID="107" v:groupContext="shape">
+				<title>Лист.107</title>
+				<path d="M0 1146.67 A7.87402 7.87402 0 0 1 15.75 1146.67 A7.87402 7.87402 0 1 1 0 1146.67 Z" class="st7"/>
+			</g>
+			<g id="shape108-130" v:mID="108" v:groupContext="shape" transform="translate(17.3228,-1.07223)">
+				<title>Лист.108</title>
+				<v:textBlock v:margins="rect(2,2,2,2)"/>
+				<v:textRect cx="32" cy="1147.75" width="64" height="13.6036"/>
+				<rect x="0" y="1140.95" width="64" height="13.6036" class="st8"/>
+			</g>
+		</g>
+		<g id="shape109-132" v:mID="109" v:groupContext="shape" v:layerMember="0" transform="translate(1524.63,190.769) rotate(90)">
+			<title>Односторонняя соединительная линия.109</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 1154.55 L102.76 1154.55" class="st9"/>
+		</g>
+		<g id="shape110-135" v:mID="110" v:groupContext="shape" v:layerMember="0"
+				transform="translate(591.695,1431.27) rotate(174.071)">
+			<title>Односторонняя соединительная линия.110</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 1154.55 L102.91 1154.55" class="st9"/>
+		</g>
+		<g id="shape111-138" v:mID="111" v:groupContext="shape" v:layerMember="0"
+				transform="translate(1483.23,-12.8837) rotate(74.6097)">
+			<title>Односторонняя соединительная линия.111</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 1154.55 L141.68 1154.55" class="st9"/>
+		</g>
+		<g id="shape112-141" v:mID="112" v:groupContext="shape" v:layerMember="0"
+				transform="translate(976.199,1327.9) rotate(159.864)">
+			<title>Односторонняя соединительная линия.112</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 1154.55 L113.22 1154.55" class="st9"/>
+		</g>
+		<g id="shape113-144" v:mID="113" v:groupContext="shape" v:layerMember="0"
+				transform="translate(1724.59,385.382) rotate(97.0379)">
+			<title>Односторонняя соединительная линия.113</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 1154.55 L96.4 1154.55" class="st9"/>
+		</g>
+		<g id="shape114-147" v:mID="114" v:groupContext="shape" v:layerMember="0"
+				transform="translate(1229.8,-713.37) rotate(38.4537)">
+			<title>Односторонняя соединительная линия.114</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 1154.55 L85.47 1154.55" class="st9"/>
+		</g>
+		<g id="shape115-150" v:mID="115" v:groupContext="shape" v:layerMember="0"
+				transform="translate(992.661,1329.08) rotate(165.357)">
+			<title>Односторонняя соединительная линия.115</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 1154.55 L126.14 1154.55" class="st9"/>
+		</g>
+		<g id="shape116-153" v:mID="116" v:groupContext="shape" v:layerMember="0"
+				transform="translate(1351.09,-614.25) rotate(41.9872)">
+			<title>Односторонняя соединительная линия.116</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 1154.55 L121.82 1154.55" class="st9"/>
+		</g>
+		<g id="shape117-156" v:mID="117" v:groupContext="shape" v:layerMember="0"
+				transform="translate(-106.474,1187.63) rotate(-132.548)">
+			<title>Односторонняя соединительная линия.117</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 1154.55 L110.62 1154.55" class="st9"/>
+		</g>
+		<g id="shape119-159" v:mID="119" v:groupContext="shape" v:layerMember="0"
+				transform="translate(521.484,1314.57) rotate(165.292)">
+			<title>Односторонняя соединительная линия.119</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 1154.55 L97.69 1154.55" class="st9"/>
+		</g>
+		<g id="shape120-162" v:mID="120" v:groupContext="shape" v:layerMember="0"
+				transform="translate(656.93,-808.57) rotate(30.0524)">
+			<title>Односторонняя соединительная линия.120</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 1154.55 L63.68 1154.55" class="st9"/>
+		</g>
+		<g id="shape121-165" v:mID="121" v:groupContext="shape" v:layerMember="0"
+				transform="translate(1201.54,-216.714) rotate(67.6317)">
+			<title>Односторонняя соединительная линия.121</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 1154.55 L103.45 1154.55" class="st9"/>
+		</g>
+		<g id="shape122-168" v:mID="122" v:groupContext="shape" v:layerMember="0"
+				transform="translate(759.497,1432.82) rotate(158.199)">
+			<title>Односторонняя соединительная линия.122</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 1154.55 L114.49 1154.55" class="st9"/>
+		</g>
+		<g id="shape123-171" v:mID="123" v:groupContext="shape" v:layerMember="0"
+				transform="translate(307.322,1554.94) rotate(175.882)">
+			<title>Односторонняя соединительная линия.123</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 1154.55 L98.68 1154.55" class="st9"/>
+		</g>
+		<g id="shape124-174" v:mID="124" v:groupContext="shape" v:layerMember="0"
+				transform="translate(1162.44,-277.029) rotate(58.9583)">
+			<title>Односторонняя соединительная линия.124</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 1154.55 L99.25 1154.55" class="st9"/>
+		</g>
+		<g id="group126-177" transform="translate(267.717,-693.701)" v:mID="126" v:groupContext="group">
+			<v:custProps>
+				<v:cp v:nameU="Number" v:lbl="Узел" v:type="0" v:sortKey="visNode0" v:langID="1049" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<title>Узел.126</title>
+			<g id="shape127-178" v:mID="127" v:groupContext="shape">
+				<title>Лист.127</title>
+				<path d="M0 1146.67 A7.87402 7.87402 0 0 1 15.75 1146.67 A7.87402 7.87402 0 1 1 0 1146.67 Z" class="st7"/>
+			</g>
+			<g id="shape128-180" v:mID="128" v:groupContext="shape" transform="translate(17.3228,-1.07223)">
+				<title>Лист.128</title>
+				<v:textBlock v:margins="rect(2,2,2,2)"/>
+				<v:textRect cx="32" cy="1147.75" width="64" height="13.6036"/>
+				<rect x="0" y="1140.95" width="64" height="13.6036" class="st8"/>
+			</g>
+		</g>
+		<g id="group129-182" transform="translate(78.7402,-870.866)" v:mID="129" v:groupContext="group">
+			<v:custProps>
+				<v:cp v:nameU="Number" v:lbl="Узел" v:type="0" v:sortKey="visNode0" v:langID="1049" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<title>Узел.129</title>
+			<g id="shape130-183" v:mID="130" v:groupContext="shape">
+				<title>Лист.130</title>
+				<path d="M0 1146.67 A7.87402 7.87402 0 0 1 15.75 1146.67 A7.87402 7.87402 0 1 1 0 1146.67 Z" class="st7"/>
+			</g>
+			<g id="shape131-185" v:mID="131" v:groupContext="shape" transform="translate(17.3228,-1.07223)">
+				<title>Лист.131</title>
+				<v:textBlock v:margins="rect(2,2,2,2)"/>
+				<v:textRect cx="32" cy="1147.75" width="64" height="13.6036"/>
+				<rect x="0" y="1140.95" width="64" height="13.6036" class="st8"/>
+			</g>
+		</g>
+		<g id="group132-187" transform="translate(283.465,-885.039)" v:mID="132" v:groupContext="group">
+			<v:custProps>
+				<v:cp v:nameU="Number" v:lbl="Узел" v:type="0" v:sortKey="visNode0" v:langID="1049" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<title>Узел.132</title>
+			<g id="shape133-188" v:mID="133" v:groupContext="shape">
+				<title>Лист.133</title>
+				<path d="M0 1146.67 A7.87402 7.87402 0 0 1 15.75 1146.67 A7.87402 7.87402 0 1 1 0 1146.67 Z" class="st7"/>
+			</g>
+			<g id="shape134-190" v:mID="134" v:groupContext="shape" transform="translate(17.3228,-1.07223)">
+				<title>Лист.134</title>
+				<v:textBlock v:margins="rect(2,2,2,2)"/>
+				<v:textRect cx="32" cy="1147.75" width="64" height="13.6036"/>
+				<rect x="0" y="1140.95" width="64" height="13.6036" class="st8"/>
+			</g>
+		</g>
+		<g id="shape135-192" v:mID="135" v:groupContext="shape" v:layerMember="0"
+				transform="translate(1027.94,-425.676) rotate(44.1048)">
+			<title>Односторонняя соединительная линия.135</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 1154.55 L71.28 1154.55" class="st9"/>
+		</g>
+		<g id="shape136-195" v:mID="136" v:groupContext="shape" v:layerMember="0"
+				transform="translate(-63.3185,1363.64) rotate(-157.952)">
+			<title>Односторонняя соединительная линия.136</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 1154.55 L84.95 1154.55" class="st9"/>
+		</g>
+		<g id="shape137-198" v:mID="137" v:groupContext="shape" v:layerMember="0"
+				transform="translate(996.779,989.7) rotate(131.634)">
+			<title>Односторонняя соединительная линия.137</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 1154.55 L71.11 1154.55" class="st9"/>
+		</g>
+		<g id="group138-201" transform="translate(763.78,-807.087)" v:mID="138" v:groupContext="group">
+			<v:custProps>
+				<v:cp v:nameU="Number" v:lbl="Узел" v:type="0" v:sortKey="visNode0" v:langID="1049" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<title>Узел.138</title>
+			<g id="shape139-202" v:mID="139" v:groupContext="shape">
+				<title>Лист.139</title>
+				<path d="M0 1146.67 A7.87402 7.87402 0 0 1 15.75 1146.67 A7.87402 7.87402 0 1 1 0 1146.67 Z" class="st7"/>
+			</g>
+			<g id="shape140-204" v:mID="140" v:groupContext="shape" transform="translate(17.3228,-1.07223)">
+				<title>Лист.140</title>
+				<v:textBlock v:margins="rect(2,2,2,2)"/>
+				<v:textRect cx="32" cy="1147.75" width="64" height="13.6036"/>
+				<rect x="0" y="1140.95" width="64" height="13.6036" class="st8"/>
+			</g>
+		</g>
+		<g id="group141-206" transform="translate(653.543,-693.701)" v:mID="141" v:groupContext="group">
+			<v:custProps>
+				<v:cp v:nameU="Number" v:lbl="Узел" v:type="0" v:sortKey="visNode0" v:langID="1049" v:val="VT4()"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<title>Узел.141</title>
+			<g id="shape142-207" v:mID="142" v:groupContext="shape">
+				<title>Лист.142</title>
+				<path d="M0 1146.67 A7.87402 7.87402 0 0 1 15.75 1146.67 A7.87402 7.87402 0 1 1 0 1146.67 Z" class="st7"/>
+			</g>
+			<g id="shape143-209" v:mID="143" v:groupContext="shape" transform="translate(17.3228,-1.07223)">
+				<title>Лист.143</title>
+				<v:textBlock v:margins="rect(2,2,2,2)"/>
+				<v:textRect cx="32" cy="1147.75" width="64" height="13.6036"/>
+				<rect x="0" y="1140.95" width="64" height="13.6036" class="st8"/>
+			</g>
+		</g>
+		<g id="shape144-211" v:mID="144" v:groupContext="shape" v:layerMember="0"
+				transform="translate(-324.395,-30.4824) rotate(-67.7379)">
+			<title>Односторонняя соединительная линия.144</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 1154.55 L72.75 1154.55" class="st9"/>
+		</g>
+		<g id="shape145-214" v:mID="145" v:groupContext="shape" v:layerMember="0"
+				transform="translate(99.4959,-555.603) rotate(-29.1241)">
+			<title>Односторонняя соединительная линия.145</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 1154.55 L94.64 1154.55" class="st9"/>
+		</g>
+		<g id="shape146-217" v:mID="146" v:groupContext="shape" transform="translate(60.2362,-627.875)">
+			<title>Скругленный прямоугольник.146</title>
+			<desc>Сетевой график</desc>
+			<v:userDefs>
+				<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(1):5"/>
+				<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0):26"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(3.99999,3.99999,3.99999,3.99999)" v:tabSpace="42.5196"/>
+			<v:textRect cx="359.639" cy="1130.45" width="719.3" height="48.1875"/>
+			<g id="shadow146-218" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<path d="M71.93 1154.55 L647.36 1154.55 A71.9262 10.6699 -180 0 0 719.29 1143.88 L719.29 1117.03 A71.9262 10.6699
+							 -180 0 0 647.36 1106.36 L71.93 1106.36 A71.9262 10.6699 -180 0 0 -0 1117.03 L0 1143.88 A71.9262 10.6699
+							 -180 0 0 71.93 1154.55 Z" class="st2"/>
+			</g>
+			<path d="M71.93 1154.55 L647.36 1154.55 A71.9262 10.6699 -180 0 0 719.29 1143.88 L719.29 1117.03 A71.9262 10.6699 -180
+						 0 0 647.36 1106.36 L71.93 1106.36 A71.9262 10.6699 -180 0 0 -0 1117.03 L0 1143.88 A71.9262 10.6699 -180
+						 0 0 71.93 1154.55 Z" class="st3"/>
+			<text x="228.37" y="1135.85" class="st5" v:langID="1049"><v:paragraph v:horizAlign="1"/><v:tabList/>Редактирование категорий работ</text>		</g>
+		<g id="group147-223" transform="translate(-426.626,1120.54) rotate(-135)" v:mID="147" v:groupContext="group">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<title>Простая односторонняя.216</title>
+			<g id="shape148-224" v:mID="148" v:groupContext="shape">
+				<title>Лист.148</title>
+				<path d="M0 1149.54 L15.03 1149.54 L15.03 1154.55 L20.04 1144.53 L15.03 1134.5 L15.03 1139.52 L0 1139.52 L0 1149.54
+							 Z" class="st11"/>
+				<path d="M0 1149.54 L15.03 1149.54 L15.03 1154.55 L20.04 1144.53 L15.03 1134.5 L15.03 1139.52 L0 1139.52"
+						class="st12"/>
+			</g>
+			<g id="shape149-227" v:mID="149" v:groupContext="shape">
+				<title>Лист.149</title>
+				<path d="M0 1149.54 L15.03 1149.54 L15.03 1154.55 L20.04 1144.53 L15.03 1134.5 L15.03 1139.52 L0 1139.52 L0 1149.54"
+						class="st13"/>
+			</g>
+			<g id="shape150-230" v:mID="150" v:groupContext="shape" transform="translate(-0.257008,-5.09585)">
+				<title>Лист.150</title>
+				<rect x="0" y="1144.7" width="0.113137" height="9.85228" class="st14"/>
+			</g>
+		</g>
+		<g id="shape151-232" v:mID="151" v:groupContext="shape" transform="translate(382.677,-797.953)">
+			<title>Поле</title>
+			<desc>Наименование: Работа по дому Количество работ: 7</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:verticalAlign="0"/>
+			<v:textRect cx="87.1654" cy="1135.41" width="174.34" height="38.2677"/>
+			<rect x="0" y="1116.28" width="174.331" height="38.2677" class="st15"/>
+			<text x="4" y="1131.08" class="st16" v:langID="1049"><v:paragraph/><v:tabList/>Наименование: Работа по дому<v:newlineChar/><tspan
+						x="4" dy="1.2em" class="st17">Количество работ</tspan>: 7</text>		</g>
+	</g>
+</svg>

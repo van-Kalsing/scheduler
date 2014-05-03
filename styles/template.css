@@ -1,0 +1,225 @@
+body {
+	padding: 0px;
+	margin:  0px;
+}
+
+
+#page {
+	overflow: hidden;
+	
+	margin: 0px auto;
+	width:  900px;
+}
+
+
+
+
+
+#top_block {
+	overflow: hidden;
+	
+	margin-left: 200px;
+}
+
+
+
+#top_menu {
+	overflow: hidden;
+	
+	float:        left;
+	padding-left: 20px;
+}
+
+
+.top_menu_item {
+	float:   left;
+	padding: 10px 20px;
+	
+	border-radius: 2px;
+}
+
+
+.top_menu_item.selected_menu_item {
+	float:   left;
+	padding: 10px 20px;
+	
+	border-radius: 2px;
+	background-color: #F0F0F0;
+}
+
+
+.top_menu_item:hover {
+	background-color: #D0D0D0;
+}
+
+
+
+#search {
+	float: right;
+	
+	margin-top:   7px;
+	margin-right: 40px;
+}
+
+
+#search_input {
+	width: 160px;
+}
+
+
+#search_submit {
+	width: 60px;
+}
+
+
+
+
+
+#main_block {
+	/* ... */
+}
+
+
+#left_main_block {
+	overflow: hidden;
+	position: absolute;
+	
+	width: 200px;
+}
+
+
+
+.left_separator {
+	float:  left;
+	margin: 5px 5px;
+	width:  190px;
+	height: 1px;
+	
+	background-color: #000000;
+}
+
+
+
+#selected_work {
+	overflow: hidden;
+	
+	float:   left;
+	padding: 5px 10px 5px 10px;
+}
+
+
+#selected_work_title {
+	float: left;
+	width: 160px;
+}
+
+
+#selected_work_title.selected_work_not_exist {
+	font-style: italic;
+	/*color:      #404040;*/
+}
+
+
+#selected_work_reset {
+	float:  right;
+	width:  20px;
+	height: 20px;
+	
+	border-radius:    2px;
+	background-color: #F0F0F0;
+}
+
+
+#selected_work_reset:hover {
+	background-color: #D0D0D0;
+}
+
+
+#selected_work_reset_icon {
+	margin: 4px;
+	width:  12px;
+	height: 12px;
+	
+	background-image: url("../images/selected-work-reset.png");
+	background-size:  12px;
+}
+
+
+
+#left_menu {
+	overflow: hidden;
+	
+	float: left;
+}
+
+
+.left_menu_item {
+	float:   left;
+	padding: 5px 10px;
+	
+	width: 180px;
+	
+	border-radius: 2px;
+}
+
+
+.left_menu_item.selected_menu_item {
+	float:   left;
+	padding: 5px 10px;
+	
+	width: 180px;
+	
+	border-radius:    2px;
+	background-color: #F0F0F0;
+}
+
+
+.left_menu_item:hover {
+	background-color: #D0D0D0;
+}
+
+
+.left_menu_separator {
+	float:  left;
+	margin: 5px;
+	width:  190px;
+	height: 1px;
+	
+	background-color: #000000;
+}
+
+
+
+
+
+#right_main_block {
+	margin-left: 200px;
+}
+
+
+
+#content {
+	/* ... */
+}
+
+
+#content_title {
+	padding: 20px 20px 25px 20px;
+	
+	font-size: 180%;
+}
+
+
+#cap {
+	width: 100%;
+}
+
+
+
+
+
+#footer_block {
+	position:    absolute;
+	bottom:      0px;
+	margin-left: 200px;
+}

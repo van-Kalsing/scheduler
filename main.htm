@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Сетевой график</title>
+		<meta charset="utf-8">
+		
+		<link href="styles/template.css" rel="stylesheet">
+		
+		<script type="text/javascript" src="scripts/jquery.js"></script>
+		<script type="text/javascript" src="scripts/template.js"></script>
+	</head>
+	
+	<body>
+		<div id="page">
+			<div id="top_block">
+				<div id="top_menu">
+					<a id="calendar_menu_item"
+							class="top_menu_item" href="#">
+						Календарь
+					</a>
+					
+					<a id="works_categories_menu_item"
+							class="top_menu_item" href="#">
+						Категории работ
+					</a>
+				</div>
+				
+				<div id="search">
+					<input id="search_input" type="text" />
+					<input id="search_submit" type="button" value="Поиск" />
+				</div>
+			</div>
+			
+			<div id="main_block">
+				<div id="left_main_block">
+					<div id="selected_work">
+						<a id="selected_work_title" href="#">
+							Издание книги
+						</a>
+						
+						<div id="selected_work_reset">
+							<div id="selected_work_reset_icon"></div>
+						</div>
+					</div>
+					
+					<div class="left_separator"></div>
+					
+					<div id="left_menu">
+						<a id="gantt_diagram_menu_item"
+								class="left_menu_item selected_menu_item"
+								href="#">
+							Сетевой график
+						</a>
+						
+						<a id="burndown_chart_menu_item"
+								class="left_menu_item" href="#">
+							Диаграмма сгорания
+						</a>
+						
+						<div class="left_menu_separator"></div>
+						
+						<a id="create_work_menu_item"
+								class="left_menu_item" href="#">
+							Новая работа
+						</a>
+					</div>
+				</div>
+				
+				<div id="right_main_block">
+					<div id="content_title">
+						Сетевой график
+					</div>
+					
+					<div id="content">
+						<img id="cap" src="images/caps/gantt-diagram.png" />
+					</div>
+				</div>
+			</div>
+			
+			<!--<div id="footer_block">
+			</div>-->
+		</div>
+	</body>
+</html>
