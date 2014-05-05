@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>На работу</title>
+<meta charset="utf-8">
+<script src="http://d3js.org/d3.v2.min.js"></script>
+<link rel="stylesheet" type="text/css" href="d3.css">
+
+<script language="JavaScript">
+function getData() {
+var c = document.forms[0].work.value
+document.forms[0].work1.value = c
+
+var g = d3.select('body') // выбор в документе body
+			.append('wwork') // добавление в body svg-контейнера
+			.append('text') // добавление в svg-контейнер элемента text
+g.text(c)  // изменение текста в элементе text			
+
+}
+</script>
+
+<head>
+
+<body>
+<div id="chart"> </div>
+<script src="force_view.js"></script>
+<script src="wwork.js"></script>
+<form>
+<input name="work" type="text" value="Введи работу"> <br/>
+<input name="work1" type="text" value=""> <br/>
+<input type="button" value="Нажми меня" onClick="getData()">
+</form>
+<div id="wwork"> </div>
+
+
+</body>
+</html>
