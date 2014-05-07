@@ -1,5 +1,6 @@
 function render_linear_calendar(container_element) {
 	container_element.html(
+		<script type="text/javascript" src="http://mbostock.github.com/d3/d3.min.js"></script>
 		<body>
 			<style>
 				body {
