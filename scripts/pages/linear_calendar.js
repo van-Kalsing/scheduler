@@ -25,7 +25,7 @@ function render_linear_calendar(container_element) {
 				td {
     					background-color: #FFFACD;
 				}
-			</stile>
+			</style>
     			<form>
         			<div id="container"></div>
         			<div1 id="container1"></div1>
