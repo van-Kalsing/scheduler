@@ -1,6 +1,7 @@
 function render_linear_calendar(container_element) {
 	container_element.html(
-		<script type="text/javascript" src="http://mbostock.github.com/d3/d3.min.js"></script>
+		"<img id='cap' src='http://eve-ru.com/upload/userpics/september2012/Untitled.png' />"
+		/*<script type="text/javascript" src="http://mbostock.github.com/d3/d3.min.js"></script>
 		<body>
 			<style>
 				body {
@@ -34,8 +35,8 @@ function render_linear_calendar(container_element) {
     			<form1>
         			<button style="position: absolute; left: 200px; top: 50px; height: 225px;" onclick="this.style.left=parseInt(this.style.left)+43+'px'; tabulate1(Tasks, ['T1']);">+</button>
     			</form1>
-    		</body>
-	);
+    		</body> */
+	); 
 }
 function tabulate(data, columns) {
     var table = d3.select("#container").append("table"),
