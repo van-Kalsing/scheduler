@@ -1,11 +1,17 @@
 function render_gantt_diagram(container_element) {
-	container_element.html(
-		"<img id='cap' src='http://image.etov.com.ua/storage/640x640/9/a/b/6/9ab654c3da47e553d45e5341aca176cd.jpg' />"
-  );
-  
-	var width = 960,
+		/*var a = 5,
+		 	b = 6,
+			c = a + b;
+			container_element.html(c)*/
+	c = container_element.attr("id")
+	container_element.html(c)
+	//container_element.html(<a href='/scripts/pages/d33.html'> VOT </a>)
+	
+var width = 960,
     height = 500,
     fill = d3.scale.category20();
+
+	
 
 // mouse event vars
 var selected_node = null,
@@ -15,7 +21,7 @@ var selected_node = null,
     mouseup_node = null;
 
 // init svg
-var outer = d3.select("#chart")
+var outer = d3.select("#content")
   .append("svg:svg")
     .attr("width", width)
     .attr("height", height)
@@ -34,7 +40,7 @@ var vis = outer
 vis.append('svg:rect')
     .attr('width', width)
     .attr('height', height)
-    .attr('fill', 'white'); //цвет фона
+    .attr('fill', 'red'); //цвет фона
 
 // init force layout
 var force = d3.layout.force()
@@ -259,5 +265,5 @@ function keydown() {
       break;
     }
   }
-}
+}	
 }
