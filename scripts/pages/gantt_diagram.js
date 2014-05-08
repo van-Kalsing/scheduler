@@ -1,17 +1,10 @@
 function render_gantt_diagram(container_element) {
-		/*var a = 5,
-		 	b = 6,
-			c = a + b;
-			container_element.html(c)*/
-	c = container_element.attr("id")
-	container_element.html(c)
-	//container_element.html(<a href='/scripts/pages/d33.html'> VOT </a>)
-	
-var width = 960,
+  container_element.html("");
+	container_element_id = container_element.attr("id");
+  
+var width = container_element.width(),
     height = 500,
     fill = d3.scale.category20();
-
-	
 
 // mouse event vars
 var selected_node = null,
@@ -19,15 +12,15 @@ var selected_node = null,
     mousedown_link = null,
     mousedown_node = null,
     mouseup_node = null;
-
+    
 // init svg
-var outer = d3.select("#content")
+var outer = d3.select("#" + container_element_id)
   .append("svg:svg")
     .attr("width", width)
     .attr("height", height)
     .attr("pointer-events", "all");
 
-	//перетаскивание графа
+  //перетаскивание графа
 var vis = outer
   .append('svg:g')
     .call(d3.behavior.zoom().on("zoom", rescale))
@@ -40,7 +33,7 @@ var vis = outer
 vis.append('svg:rect')
     .attr('width', width)
     .attr('height', height)
-    .attr('fill', 'red'); //цвет фона
+    .attr('fill', 'white'); //цвет фона
 
 // init force layout
 var force = d3.layout.force()
@@ -148,7 +141,6 @@ function rescale() {
 
 // redraw force layout
 function redraw() {
-
   link = link.data(links);
 
   link.enter().insert("line", ".node")
@@ -265,5 +257,5 @@ function keydown() {
       break;
     }
   }
-}	
+}
 }
