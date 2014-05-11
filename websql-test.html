@@ -31,7 +31,7 @@ and open the template in the editor.
             db.transaction(function(tx) {
             tx.executeSql("insert into task (task_id, task_name, short_task_name, duration, work_id, priority) values (?,?,?,?,?,?)", ["2", "Тестовая запись #2", "ТЗ2", "315", "1", "3"], null, function(tx, error){ alert(error); });
             });
-            
+            //просто тест гита, ничего более
             //а теперь просто выведем эту запись
             db.transaction(function(tx) {
             tx.executeSql("SELECT task_id, task_name, short_task_name FROM task", [], function(tx, result) {
