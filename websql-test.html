@@ -35,7 +35,7 @@ and open the template in the editor.
             //а теперь просто выведем эту запись
             db.transaction(function(tx) {
             tx.executeSql("SELECT task_id, task_name, short_task_name FROM task", [], function(tx, result) {
-													for(var i = 0; i < result.rows.length; i++) {
+		//test											for(var i = 0; i < result.rows.length; i++) {
 													document.write('<b>' + result.rows.item(i)['task_name'] + '</b><br />');
 													}}, null)});  
             
