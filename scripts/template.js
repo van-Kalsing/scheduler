@@ -5,8 +5,15 @@ $(document).ready(function() {
 			"linear_calendar":
 				{
 					"render"       : render_linear_calendar,
-					"title"        : "Календарь",
-					"menu_element" : $("#calendar_menu_item"),
+					"title"        : "Линейный календарь",
+					"menu_element" : $("#linear_calendar_menu_item"),
+				},
+				
+			"table_calendar":
+				{
+					"render"       : render_table_calendar,
+					"title"        : "Табличный календарь",
+					"menu_element" : $("#table_calendar_menu_item"),
 				},
 				
 			"gantt_diagram":
@@ -135,9 +142,15 @@ $(document).ready(function() {
 			}
 		);
 		
-		$("#calendar_menu_item").click(
+		$("#linear_calendar_menu_item").click(
 			function() {
 				activate_page("linear_calendar");
+			}
+		);
+		
+		$("#table_calendar_menu_item").click(
+			function() {
+				activate_page("table_calendar");
 			}
 		);
 		
