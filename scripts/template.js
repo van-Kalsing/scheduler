@@ -111,6 +111,9 @@ $(document).ready(function() {
 					);
 				}
 				
+				// Очистка текущего содержимого страницы
+				interface_state["content"].html("");
+				
 				// Отображение содержимого страницы
 				page["render"](interface_state["content"]);
 				
