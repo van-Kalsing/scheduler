@@ -38,9 +38,10 @@ vis.append('svg:rect')
 // init force layout
 var force = d3.layout.force()
     .size([width, height])
+    .gravity(0)
     .nodes([{}]) // initialize with a single node
-    .linkDistance(50)
-    .charge(-200) //вроде длина линии, но должна быть с минусм
+    .linkDistance(100) //длина линии
+    .charge(-200) 
     .on("tick", tick);
 
 
@@ -96,7 +97,7 @@ function mouseup() {
     if (!mouseup_node) {
       // add node
       var point = d3.mouse(this),
-        node = {x: point[0], y: point[1]},
+        node = { x: point[0], y: point[1], fixed: true },
         n = nodes.push(node);
 
       // select new node
