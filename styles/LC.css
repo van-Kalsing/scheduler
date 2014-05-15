@@ -1,0 +1,12 @@
+td, th {
+    padding: 4px 4px;
+}
+
+th {
+    font-weight: bold;
+    background-color: lightgrey;
+}
+
+td {
+    background-color: #FFFACD;
+}
