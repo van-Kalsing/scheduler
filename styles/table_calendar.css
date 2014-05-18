@@ -1,0 +1,20 @@
+.table_calendar.out {
+  background-color: yellow;
+}
+  
+table.table_calendar {
+  border-collapse: collapse;
+  table-layout: fixed;   
+}
+
+td.table_calendar, th.table_calendar {
+  border: 1px solid black;
+  padding: 3px;
+  text-align: center;
+}
+
+th.table_calendar {
+  font-weight: bold;
+  background-color: #E6E6E6;
+    
+}
