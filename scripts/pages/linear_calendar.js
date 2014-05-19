@@ -1,5 +1,5 @@
 function render_linear_calendar(container_element) {
-    container_element.html("<button style='position: absolute; left: 390px; top: 95px; height: 20px; width: 350px', onclick='this.style.left=parseInt(this.style.left)+43+'px''>Вверх</button> <button style='position: absolute; left: 390px; top: 360px; height: 20px; width: 350px'>Вниз</button>");
+    container_element.html("<button style='position: relative; left: 0px; top: 20px; height: 20px; width: 350px', onclick='scrup(pre)'>Вверх</button> <button style='position: relative; left: 0px; top: 250px; height: 20px; width: 350px'>Вниз</button>");
     container_element_id = container_element.attr("id");
 	
 	function tabulate(data, columns) {
@@ -33,32 +33,31 @@ function render_linear_calendar(container_element) {
 
 	    return table;
 	}
+	
+	function scrup(dayn) {
+		dayn=dayn-7;
+		container_element.html("");
+		container_element_id = "";
+		container_element_id = container_element.attr("id");
+	}
+	
+	var date = new Date();    
+  //  var dayCount = (new Date(year, month + 1, 0)).getDate();
+    //var dayNum = 1 - (date.getDay() == 0 ? 7 : date.getDay());
 
 	// create some people
-	var pre = 9; //Последнее число из предыдущей выборки
-	var str1 = "T1: 'раб1', T2: 'раб1', T3: 'раб1', T4: 'раб1', T5: 'раб1'";
+	var d = (date.getDate()-(date.getDay()||7)+1); //Последнее число из предыдущей выборки
 	var LCTab = [
-    { Day: "Понедельник", Date: pre + 1, T1: "раб1", T2: "раб1", T3: "раб1", T4: "раб1", T5: "раб1"},
-    { Day: "Вторник", Date: pre + 2, T1: 'раб2', T2: "раб2", T3: "раб2", T4: "раб2", T5: "раб2"},
-    { Day: "Среда", Date: pre + 3, T1: "раб3", T2: "раб3", T3: "раб3", T4: "раб3", T5: "раб3"},
-    { Day: "Четверг", Date: pre + 4, T1: "раб4", T2: "раб4", T3: "раб4", T4: "раб4", T5: "раб4"},
-    { Day: "Пятница", Date: pre + 5, T1: "раб5", T2: "раб5", T3: "раб5", T4: "раб5", T5: "раб5"},
-    { Day: "Суббота", Date: pre + 6, T1: "раб6", T2: "раб6", T3: "раб6", T4: "раб6", T5: "раб6"},
-    { Day: "Воскресенье", Date: pre + 7, T1: "раб7", T2: "раб7", T3: "раб7", T4: "раб7", T5: "раб7"}];
-
-	var Tasks = [
-    { T1: "Раб.1" },
-    { T1: "Раб.2" },
-    { T1: "Раб.3" },
-    { T1: "Раб.4" },
-    { T1: "Раб.5" },
-    { T1: "Раб.6" },
-    { T1: "Раб.7" }];
+    { Day: "Понедельник", Date: d + 0, W1: "З1", W2: "З1", W3: "  ", W4: "З6", W5: "  "},
+    { Day: "Вторник",     Date: d + 1, W1: "З2", W2: "З2", W3: "З1", W4: "З7", W5: "  "},
+    { Day: "Среда",       Date: d + 2, W1: "З3", W2: "З3", W3: "З2", W4: "З8", W5: "  "},
+    { Day: "Четверг",     Date: d + 3, W1: "З4", W2: "З4", W3: "З3", W4: "  ", W5: "  "},
+    { Day: "Пятница",     Date: d + 4, W1: "З5", W2: "З5", W3: "З4", W4: "  ", W5: "  "},
+    { Day: "Суббота",     Date: d + 5, W1: "З6", W2: "  ", W3: "З5", W4: "  ", W5: "З1"},
+    { Day: "Воскресенье", Date: d + 6, W1: "З7", W2: "  ", W3: "  ", W4: "  ", W5: "З2"}];
 
 	// render the table
-	var ZTable = tabulate(LCTab, ["Day", "Date", "T1", "T2", "T3", "T4", "T5"]);
-	//ZTable = tabulate(Tasks, ["T1"]);
-	//var TTable = tabulate(Tasks, ['T1', 'T2']);
+	var ZTable = tabulate(LCTab, ["Day", "Date", "W1", "W2", "W3", "W4", "W5"]);
 
 	// uppercase the column headers
 	ZTable.selectAll("thead th")
