@@ -46,7 +46,20 @@ e.html("<button style='position: relative; left: 0px; top: 20px;"
 function scrup(dayn) {
     e.html("");
 	var dim = 32 - new Date(year, month-1, 32).getDate();
-	if (t1 == false) {dayn = dayn-6; t1 = true; t = false;}
+	if (t1 == false) {
+	if (dayn>1) {dayn=dayn-1;}       else {dayn=dim; if (month>0) {
+	month = month-1;} else {year = year-1; month=11;}}
+	if (dayn>1) {dayn=dayn-1;}       else {dayn=dim; if (month>0) {
+	month = month-1;} else {year = year-1; month=11;}}
+	if (dayn>1) {dayn=dayn-1;}       else {dayn=dim; if (month>0) {
+	month = month-1;} else {year = year-1; month=11;}}
+	if (dayn>1) {dayn=dayn-1;}       else {dayn=dim; if (month>0) {
+	month = month-1;} else {year = year-1; month=11;}}
+	if (dayn>1) {dayn=dayn-1;}       else {dayn=dim; if (month>0) {
+	month = month-1;} else {year = year-1; month=11;}}
+	if (dayn>1) {dayn=dayn-1;}       else {dayn=dim; if (month>0) {
+	month = month-1;} else {year = year-1; month=11;}}
+	t1 = true; t = false;}
 	if (dayn>1) {dayn=dayn-1;}       else {dayn=dim; if (month>0) {
 	month = month-1;} else {year = year-1; month=11;}}
 	if (dayn>1) {var dayn1=dayn-1;}  else {dayn1=dim; if (month>0) {
@@ -88,7 +101,20 @@ function scrup(dayn) {
 function scrdown(dayn) {
     e.html("");
 	var dim = 32 - new Date(year, month, 32).getDate();	
-	if (t == false) {dayn = dayn+6; t = true; t1 = false;} 
+	if (t == false) {
+	if (dayn<dim) {dayn=dayn+1;}       else {dayn=1; if (month<11) {
+	month = month+1;} else {year = year+1; month=0;}}
+	if (dayn<dim) {dayn=dayn+1;}       else {dayn=1; if (month<11) {
+	month = month+1;} else {year = year+1; month=0;}}
+	if (dayn<dim) {dayn=dayn+1;}       else {dayn=1; if (month<11) {
+	month = month+1;} else {year = year+1; month=0;}}
+	if (dayn<dim) {dayn=dayn+1;}       else {dayn=1; if (month<11) {
+	month = month+1;} else {year = year+1; month=0;}}
+	if (dayn<dim) {dayn=dayn+1;}       else {dayn=1; if (month<11) {
+	month = month+1;} else {year = year+1; month=0;}}
+	if (dayn<dim) {dayn=dayn+1;}       else {dayn=1; if (month<11) {
+	month = month+1;} else {year = year+1; month=0;}}
+	t = true; t1 = false;} 
 	if (dayn<dim) {dayn=dayn+1;}       else {dayn=1; if (month<11) {
 	month = month+1;} else {year = year+1; month=0;}}
 	if (dayn<dim) {var dayn1=dayn+1;}  else {dayn1=1; if (month<11) {
@@ -113,7 +139,7 @@ function scrdown(dayn) {
     { Day: "Воскресенье", Date: dayn6,  W1: "З7", W2: "  ", W3: "  ", W4: "  ", W5: "З2"}];
     // render the table
     var ZTable = tabulate(LCTab, ["Day", "Date", "W1", "W2", "W3", "W4", "W5"]);
-	d=dayn6;
+	d = dayn6;
     // uppercase the column headers
     ZTable.selectAll("thead th")
     .text(function (column) {
