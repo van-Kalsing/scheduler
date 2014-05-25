@@ -1,0 +1,25 @@
+#content svg {
+	/* ... */
+}
+
+
+#content .schedule_nodes {
+	fill: #000;
+}
+
+#content .schedule_shifts {
+	fill:         none;
+	stroke:       #000;
+	stroke-width: 1;
+}
+
+
+#content .implementation_nodes {
+	fill: #F00;
+}
+
+#content .implementation_shifts {
+	fill:         none;
+	stroke:       #F00;
+	stroke-width: 1;
+}
