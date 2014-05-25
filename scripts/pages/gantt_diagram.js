@@ -33,7 +33,7 @@ var vis = outer
 vis.append('svg:rect')
     .attr('width', width)
     .attr('height', height)
-    .attr('fill', 'white'); //цвет фона
+    .attr('fill', 'FloralWhite'); //цвет фона
 
 // init force layout
 var force = d3.layout.force()
