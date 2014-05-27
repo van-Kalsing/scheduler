@@ -1,4 +1,5 @@
 var d = null;
+var ld = null;
 var e = null;
 var date = new Date();
 var t = false; // триггер для функции scrdown
@@ -10,7 +11,7 @@ function tabulate(data, columns) {
 e.html("<button style='position: relative; left: 0px; top: 20px;" 
         + " height: 20px; width: 350px', onclick='scrup(d)'>Вверх</button> " 
         + "<button style='position: relative; left: 0px; top: 250px;"
-		+"height: 20px; width: 350px', onclick='scrdown(d)'>Вниз</button>");
+		+"height: 20px; width: 350px', onclick='scrdown(ld)'>Вниз</button>");
     container_element_id = e.attr("id");
     var table = d3.select("#" + container_element_id).append("table"),
     thead = table.append("thead"),
@@ -46,45 +47,24 @@ e.html("<button style='position: relative; left: 0px; top: 20px;"
 function scrup(dayn) {
     e.html("");
 	var dim = 32 - new Date(year, month-1, 32).getDate();
-	if (t1 == false) {
-	if (dayn>1) {dayn=dayn-1;}       else {dayn=dim; if (month>0) {
-	month = month-1;} else {year = year-1; month=11;}}
-	if (dayn>1) {dayn=dayn-1;}       else {dayn=dim; if (month>0) {
-	month = month-1;} else {year = year-1; month=11;}}
-	if (dayn>1) {dayn=dayn-1;}       else {dayn=dim; if (month>0) {
-	month = month-1;} else {year = year-1; month=11;}}
-	if (dayn>1) {dayn=dayn-1;}       else {dayn=dim; if (month>0) {
-	month = month-1;} else {year = year-1; month=11;}}
-	if (dayn>1) {dayn=dayn-1;}       else {dayn=dim; if (month>0) {
-	month = month-1;} else {year = year-1; month=11;}}
-	if (dayn>1) {dayn=dayn-1;}       else {dayn=dim; if (month>0) {
-	month = month-1;} else {year = year-1; month=11;}}
-	t1 = true; t = false;}
-	if (dayn>1) {dayn=dayn-1;}       else {dayn=dim; if (month>0) {
-	month = month-1;} else {year = year-1; month=11;}}
-	if (dayn>1) {var dayn1=dayn-1;}  else {dayn1=dim; if (month>0) {
-	month = month-1;} else {year = year-1; month=11;}}
-	if (dayn1>1){var dayn2=dayn1-1;} else {dayn2=dim; if (month>0) {
-	month = month-1;} else {year = year-1; month=11;}}
-	if (dayn2>1){var dayn3=dayn2-1;} else {dayn3=dim; if (month>0) {
-	month = month-1;} else {year = year-1; month=11;}}
-	if (dayn3>1){var dayn4=dayn3-1;} else {dayn4=dim; if (month>0) {
-	month = month-1;} else {year = year-1; month=11;}}
-	if (dayn4>1){var dayn5=dayn4-1;} else {dayn5=dim; if (month>0) {
-	month = month-1;} else {year = year-1; month=11;}}
-	if (dayn5>1){var dayn6=dayn5-1;} else {dayn6=dim; if (month>0) {
-	month = month-1;} else {year = year-1; month=11;}}
+	var days = [];
+	for (var i=0; i<7; i++) {
+		if (dayn>1) {dayn=dayn-1;} else {dayn=dim; if (month>0) {
+		month = month-1;} else {year = year-1; month=11;}}
+		days[i] = dayn;
+	} 
     var LCTab = [
-    { Day: "Понедельник", Date: dayn6, W1: "З1", W2: "З1", W3: "  ", W4: "З6", W5: "  "},
-    { Day: "Вторник",     Date: dayn5, W1: "З2", W2: "З2", W3: "З1", W4: "З7", W5: "  "},
-    { Day: "Среда",       Date: dayn4, W1: "З3", W2: "З3", W3: "З2", W4: "З8", W5: "  "},
-    { Day: "Четверг",     Date: dayn3, W1: "З4", W2: "З4", W3: "З3", W4: "  ", W5: "  "},
-    { Day: "Пятница",     Date: dayn2, W1: "З5", W2: "З5", W3: "З4", W4: "  ", W5: "  "},
-    { Day: "Суббота",     Date: dayn1, W1: "З6", W2: "  ", W3: "З5", W4: "  ", W5: "З1"},
-    { Day: "Воскресенье", Date: dayn,  W1: "З7", W2: "  ", W3: "  ", W4: "  ", W5: "З2"}];
+    { Day: "Понедельник", Date: days[6], W1: "З1", W2: "З1", W3: "  ", W4: "З6", W5: "  "},
+    { Day: "Вторник",     Date: days[5], W1: "З2", W2: "З2", W3: "З1", W4: "З7", W5: "  "},
+    { Day: "Среда",       Date: days[4], W1: "З3", W2: "З3", W3: "З2", W4: "З8", W5: "  "},
+    { Day: "Четверг",     Date: days[3], W1: "З4", W2: "З4", W3: "З3", W4: "  ", W5: "  "},
+    { Day: "Пятница",     Date: days[2], W1: "З5", W2: "З5", W3: "З4", W4: "  ", W5: "  "},
+    { Day: "Суббота",     Date: days[1], W1: "З6", W2: "  ", W3: "З5", W4: "  ", W5: "З1"},
+    { Day: "Воскресенье", Date: days[0], W1: "З7", W2: "  ", W3: "  ", W4: "  ", W5: "З2"}];
     // render the table
     var ZTable = tabulate(LCTab, ["Day", "Date", "W1", "W2", "W3", "W4", "W5"]);
-	d=dayn6;
+	d = days[6];
+	ld = days[0];
     // uppercase the column headers
     ZTable.selectAll("thead th")
     .text(function (column) {
@@ -100,46 +80,25 @@ function scrup(dayn) {
 
 function scrdown(dayn) {
     e.html("");
-	var dim = 32 - new Date(year, month, 32).getDate();	
-	if (t == false) {
-	if (dayn<dim) {dayn=dayn+1;}       else {dayn=1; if (month<11) {
-	month = month+1;} else {year = year+1; month=0;}}
-	if (dayn<dim) {dayn=dayn+1;}       else {dayn=1; if (month<11) {
-	month = month+1;} else {year = year+1; month=0;}}
-	if (dayn<dim) {dayn=dayn+1;}       else {dayn=1; if (month<11) {
-	month = month+1;} else {year = year+1; month=0;}}
-	if (dayn<dim) {dayn=dayn+1;}       else {dayn=1; if (month<11) {
-	month = month+1;} else {year = year+1; month=0;}}
-	if (dayn<dim) {dayn=dayn+1;}       else {dayn=1; if (month<11) {
-	month = month+1;} else {year = year+1; month=0;}}
-	if (dayn<dim) {dayn=dayn+1;}       else {dayn=1; if (month<11) {
-	month = month+1;} else {year = year+1; month=0;}}
-	t = true; t1 = false;} 
-	if (dayn<dim) {dayn=dayn+1;}       else {dayn=1; if (month<11) {
-	month = month+1;} else {year = year+1; month=0;}}
-	if (dayn<dim) {var dayn1=dayn+1;}  else {dayn1=1; if (month<11) {
-	month = month+1;} else {year = year+1; month=0;}}
-	if (dayn1<dim){var dayn2=dayn1+1;} else {dayn2=1; if (month<11) {
-	month = month+1;} else {year = year+1; month=0;}}
-	if (dayn2<dim){var dayn3=dayn2+1;} else {dayn3=1; if (month<11) {
-	month = month+1;} else {year = year+1; month=0;}}
-	if (dayn3<dim){var dayn4=dayn3+1;} else {dayn4=1; if (month<11) {
-	month = month+1;} else {year = year+1; month=0;}}
-	if (dayn4<dim){var dayn5=dayn4+1;} else {dayn5=1; if (month<11) {
-	month = month+1;} else {year = year+1; month=0;}}
-	if (dayn5<dim){var dayn6=dayn5+1;} else {dayn6=1; if (month<11) {
-	month = month+1;} else {year = year+1; month=0;}}
+	var dim = 32 - new Date(year, month, 32).getDate();
+	var days = [];
+	for (var i=0; i<7; i++) {
+		if (dayn<dim) {dayn=dayn+1;}       else {dayn=1; if (month<11) {
+		month++;} else {year = year+1; month=0;}}
+		days[i] = dayn;
+	}
     var LCTab = [
-    { Day: "Понедельник", Date: dayn, W1: month, W2: "З1", W3: "  ", W4: "З6", W5: "  "},
-    { Day: "Вторник",     Date: dayn1, W1: year, W2: "З2", W3: "З1", W4: "З7", W5: "  "},
-    { Day: "Среда",       Date: dayn2, W1: "З3", W2: "З3", W3: "З2", W4: "З8", W5: "  "},
-    { Day: "Четверг",     Date: dayn3, W1: "З4", W2: "З4", W3: "З3", W4: "  ", W5: "  "},
-    { Day: "Пятница",     Date: dayn4, W1: "З5", W2: "З5", W3: "З4", W4: "  ", W5: "  "},
-    { Day: "Суббота",     Date: dayn5, W1: "З6", W2: "  ", W3: "З5", W4: "  ", W5: "З1"},
-    { Day: "Воскресенье", Date: dayn6,  W1: "З7", W2: "  ", W3: "  ", W4: "  ", W5: "З2"}];
+    { Day: "Понедельник", Date: days[0], W1: month, W2: "З1", W3: "  ", W4: "З6", W5: "  "},
+    { Day: "Вторник",     Date: days[1], W1: year, W2: "З2", W3: "З1", W4: "З7", W5: "  "},
+    { Day: "Среда",       Date: days[2], W1: "З3", W2: "З3", W3: "З2", W4: "З8", W5: "  "},
+    { Day: "Четверг",     Date: days[3], W1: "З4", W2: "З4", W3: "З3", W4: "  ", W5: "  "},
+    { Day: "Пятница",     Date: days[4], W1: "З5", W2: "З5", W3: "З4", W4: "  ", W5: "  "},
+    { Day: "Суббота",     Date: days[5], W1: "З6", W2: "  ", W3: "З5", W4: "  ", W5: "З1"},
+    { Day: "Воскресенье", Date: days[6], W1: "З7", W2: "  ", W3: "  ", W4: "  ", W5: "З2"}];
     // render the table
     var ZTable = tabulate(LCTab, ["Day", "Date", "W1", "W2", "W3", "W4", "W5"]);
-	d = dayn6;
+	d = days[0];
+	ld = days[6];
     // uppercase the column headers
     ZTable.selectAll("thead th")
     .text(function (column) {
@@ -155,22 +114,47 @@ function scrdown(dayn) {
 
 function render_linear_calendar(container_element) {
     e = container_element;
-    container_element.html("<button style='position: relative; left: 0px; top: 20px;" 
-        + " height: 20px; width: 350px', onclick='scrup(-7)'>Вверх</button> <button style='position: relative; left: 0px; top: 250px; height: 20px; width: 350px', onclick='scrup(7)'>Вниз</button>");
     container_element_id = container_element.attr("id");
-	// create some people
 	d = (date.getDate()-(date.getDay()||7)+1); //Последнее число из предыдущей выборки
+	var dim = 32 - new Date(year, month, 32).getDate();	
+	if (d < dim) {var d1 = d+1} else {month+1; d1=1;}
+	if (d1 < dim) {var d2 = d1+1} else {month++; d2=1;}
+	if (d2 < dim) {var d3 = d2+1} else {month++; d3=1;}
+	if (d3 < dim) {var d4 = d3+1} else {month++; d4=1;}
+	if (d4 < dim) {var d5 = d4+1} else {month++; d5=1;}
+	if (d5 < dim) {var d6 = d5+1} else {month++; d6=1;}
+	
+	ld = d6;
+	
+	var obj1 = {Day: "Понедельник", Date: d};
+	var obj2 = {Day: "Вторник", Date: d1};
+	var obj3 = {Day: "Среда", Date: d2};
+	var obj4 = {Day: "Четверг", Date: d3};
+	var obj5 = {Day: "Пятница", Date: d4};
+	var obj6 = {Day: "Суббота", Date: d5};
+	var obj7 = {Day: "Воскресенье", Date: d6};
+	
+	//ar1["W1"] = "31";
 	var LCTab = [
-    { Day: "Понедельник", Date: d + 0, W1: "З1", W2: "З1", W3: "  ", W4: "З6", W5: "  "},
-    { Day: "Вторник",     Date: d + 1, W1: "З2", W2: "З2", W3: "З1", W4: "З7", W5: "  "},
-    { Day: "Среда",       Date: d + 2, W1: "З3", W2: "З3", W3: "З2", W4: "З8", W5: "  "},
-    { Day: "Четверг",     Date: d + 3, W1: "З4", W2: "З4", W3: "З3", W4: "  ", W5: "  "},
-    { Day: "Пятница",     Date: d + 4, W1: "З5", W2: "З5", W3: "З4", W4: "  ", W5: "  "},
-    { Day: "Суббота",     Date: d + 5, W1: "З6", W2: "  ", W3: "З5", W4: "  ", W5: "З1"},
-    { Day: "Воскресенье", Date: d + 6, W1: "З7", W2: "  ", W3: "  ", W4: "  ", W5: "З2"}];
-
+    obj1,
+    obj2,
+    obj3,
+    obj4,
+    obj5,
+    obj6,
+    obj7];
+	var qutasks = 6;
+	for (var i=0; i<LCTab.length; i++) {
+		for (var j=0; j<qutasks; j++) {
+			LCTab[i]["W"+(j+1)] = "Задача "+(j+1)+" "+LCTab[i].Date+"-го числа";
+		}
+	}
+	var arD = ["Day", "Date"];
+	for (i=0; i<qutasks; i++) {
+		arD[i+2] = "W"+(i+1);
+	}
 	// render the table
-	var ZTable = tabulate(LCTab, ["Day", "Date", "W1", "W2", "W3", "W4", "W5"]);
+	var ZTable = tabulate(LCTab, arD);
 
 	// uppercase the column headers
 	ZTable.selectAll("thead th")
@@ -183,4 +167,15 @@ function render_linear_calendar(container_element) {
   .sort(function (a, b) {
       return d3.descending(a.age, b.age);
   });
+}
+
+function merg_obj(o1, o2) {
+var o3;
+for(var key = 0; key < o1; Key++)
+{
+if(o2[key])
+o3[key] = new Array(o1[key],o2[key]);
+else
+o3[key] = o1[key];
+}
 }
