@@ -73,23 +73,23 @@ var svg = d3.select("#" + container_element_id).append("svg")
     .attr("height", height);
 
 var cluster = d3.layout.cluster()
-    .size([width, height])
+    .size([width/2, height/2])
     
 var link = svg.selectAll(".link")
     .data(cluster.links(cluster.nodes(graph)))
     .enter().append("line")
     .classed("link", true)
-    .attr("x1", function(node) { return node.source.x; })
-    .attr("y1", function(node) { return node.source.y; })
-    .attr("x2", function(node) { return node.target.x; })
-    .attr("y2", function(node) { return node.target.y; });
+    .attr("x1", function(node) { return node.source.y; })
+    .attr("y1", function(node) { return node.source.x; })
+    .attr("x2", function(node) { return node.target.y; })
+    .attr("y2", function(node) { return node.target.x; });
     
 var node = svg.selectAll(".node")
     .data(cluster.nodes(graph))
     .enter()
     .append("g")
     .classed("node", true)
-    .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+    .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; });
     
 node.append("circle")
     .attr("r", 8);
