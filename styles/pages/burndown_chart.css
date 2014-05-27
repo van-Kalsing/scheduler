@@ -1,25 +1,60 @@
-#content svg {
+#content #chart {
 	/* ... */
 }
 
 
-#content .schedule_nodes {
+
+
+
+#content #chart #date_line {
+	fill:             none;
+	stroke-width:     0.5;
+	stroke-dasharray: 10, 10;
+}
+
+#content #chart #date_line.active {
+	stroke: #F00;
+}
+
+#content #chart #date_line.passive {
+	stroke: none;
+}
+
+
+
+
+
+#content #chart .node .outer {
+	opacity: 0;
+}
+
+#content #chart .node .outer:hover {
+	opacity: 1;
+}
+
+#content #chart .shift {
+	fill:         none;
+	stroke-width: 1;
+}
+
+
+
+
+
+#content #chart #schedule_graph .node {
 	fill: #000;
 }
 
-#content .schedule_shifts {
-	fill:         none;
-	stroke:       #000;
-	stroke-width: 1;
+#content #chart #schedule_graph .shift {
+	stroke: #000;
 }
 
 
-#content .implementation_nodes {
+
+#content #chart #implementation_graph .node {
 	fill: #F00;
 }
 
-#content .implementation_shifts {
-	fill:         none;
-	stroke:       #F00;
-	stroke-width: 1;
+#content #chart #implementation_graph .shift {
+	stroke: #F00;
 }

@@ -114,6 +114,26 @@ function prepare_data() {
 	}
 	
 	
+	// Определение дат, которым соответствуют узлы
+	// function prepare_dates() {
+	// 	var dates_times = new Array();
+	// 	var dates       = new Array();
+		
+		
+	// 	function prepare_dates(transitions) {
+	// 		transitions.forEach(function(transition) {
+	// 			var date_time = transition["date"].getTime();
+				
+	// 			if (dates_times.indexOf(date_time) == -1) {
+	// 				dates_times.push(date_time);
+	// 				dates.push(date);
+	// 			}
+	// 		});
+	// 	}
+	// 	data["schedule"]
+	// }
+	
+	
 	var prepared_data =
 		{
 			"tasks_number"    : data["tasks_number"],
@@ -121,6 +141,7 @@ function prepare_data() {
 			"work_end_date"   : data["work_end_date"],
 			"schedule"        : prepare_transitions(data["schedule"]),
 			"implementation"  : prepare_transitions(data["implementation"]),
+			// "dates"           : prepare_dates(),
 		};
 		
 		
@@ -159,105 +180,197 @@ function render_data(data, chart) {
 			
 			
 			
-	// Функция прорисовки узлов и переходов
-	function render_transitions(transitions, nodes_class, shifts_class) {
-		// Вспомогательные функции для вычисления координат круга,
-		// отображающего узел
-		function scale_node_date(node) {
-			var scaled_date =
-				date_scale(
-					node["date"]
-				);
-				
-			return scaled_date;
-		}
-		
-		
-		function scale_node_rest_tasks_number(node) {
-			var scaled_rest_tasks_number =
-				rest_tasks_number_scale(
-					node["rest_tasks_number"]
-				);
-				
-			return scaled_rest_tasks_number;
-		}
-		
-		
-		
-		// Вспомогательная функция для вычисления точек полилинии,
-		// отображающей переход
-		function compute_shift_points(shift) {
-			var predecessor_node = shift["predecessor"];
-			var successor_node   = shift["successor"];
 			
 			
-			var first_point =
-				scale_node_date(predecessor_node) 
-					+ ","
-					+ scale_node_rest_tasks_number(predecessor_node);
-					
-			var second_point =
-				scale_node_date(successor_node) 
-					+ ","
-					+ scale_node_rest_tasks_number(predecessor_node);
-					
-			var third_point =
-				scale_node_date(successor_node) 
-					+ ","
-					+ scale_node_rest_tasks_number(successor_node);
-					
-			var points =
-				first_point
-					+ " " + second_point
-					+ " " + third_point;
-					
-					
-			return points;
-		}
-		
-		
-		
-		// Прорисовка узлов
-		chart.selectAll("." + nodes_class)
-			.data(transitions["nodes"])
-			.enter()
+	// Функция прорисовки структурных элементов диаграммы
+	function render_structural_elements() {
+		chart
+			.append("line")
+			.attr("id", "date_line")
+			.classed("active", false)
+			.classed("passive", true)
 			
-			.append("circle")
-			.classed(nodes_class, true)
-			.attr("r", 3)
-			.attr("cx", scale_node_date)
-			.attr("cy", scale_node_rest_tasks_number);
-			
-			
-			
-		// Прорисовка переходов
-		chart.selectAll("." + shifts_class)
-			.data(transitions["shifts"])
-			.enter()
-			
-			.append("polyline")
-			.classed(shifts_class, true)
-			.attr("points", compute_shift_points);
+			.attr("x1", 0)
+			.attr("y1", 0)
+			.attr("x2", 0)
+			.attr("y2", chart_parameters["height"]);
 	}
 	
 	
 	
-	// Прорисовка диаграммы
-	chart
-		.style("width", chart_parameters["width"] + "px")
-		.style("height", chart_parameters["height"] + "px");
-		
-	render_transitions(
-		data["implementation"],
-		"implementation_nodes",
-		"implementation_shifts"
-	);
+	// Функция прорисовки узлов и переходов
+	function render_transitions(transitions, graph) {
+		// Прорисовка узлов
+			// Вспомогательные функции вычисления координат элементов,
+			// отображающих узлы
+			function scale_node_date(node) {
+				var scaled_date =
+					date_scale(
+						node["date"]
+					);
+					
+				return scaled_date;
+			}
+			
+			
+			function scale_node_rest_tasks_number(node) {
+				var scaled_rest_tasks_number =
+					rest_tasks_number_scale(
+						node["rest_tasks_number"]
+					);
+					
+				return scaled_rest_tasks_number;
+			}
+			
+			
+			
+			// Вспомогательные функции обработки наведения указателя мыши на
+			// элементы отображающие узелы
+			function activate_node(node) {
+				var scaled_date = date_scale(node["date"]);
+				
+				chart.select("#date_line")
+					.classed("active", true)
+					.classed("passive", false)
+					
+					.attr("x1", scaled_date)
+					.attr("x2", scaled_date);
+			}
+			
+			
+			function deactivate_node(node) {
+				chart.select("#date_line")
+					.classed("active", false)
+					.classed("passive", true);
+			}
+			
+			
+			
+			// Создание групп элементов, отображающих узлы
+			var nodes =
+				graph.selectAll()
+					.data(transitions["nodes"])
+					.enter()
+					
+					.append("g")
+					.classed("node", true);
+					
+					
+			// Добавление внутренних кругов (видимых всегда)
+			nodes
+				.append("circle")
+				.classed("inner", true)
+				
+				.attr("r", 3)
+				.attr("cx", scale_node_date)
+				.attr("cy", scale_node_rest_tasks_number);
+				
+				
+			// Добавление внешних кругов (видимых при наведнии указателя мыши)
+			nodes
+				.append("circle")
+				.classed("outer", true)
+				
+				.attr("r", 5)
+				.attr("cx", scale_node_date)
+				.attr("cy", scale_node_rest_tasks_number)
+				
+				.on("mouseover", activate_node)
+				.on("mouseout", deactivate_node);
+				
+				
+				
+		// Прорисовка переходов
+			// Вспомогательная функция вычисления точек полилинии,
+			// отображающей переход
+			function compute_shift_points(shift) {
+				var predecessor_node = shift["predecessor"];
+				var successor_node   = shift["successor"];
+				
+				
+				var first_point =
+					date_scale(predecessor_node["date"]) 
+						+ ","
+						+ rest_tasks_number_scale(
+								predecessor_node["rest_tasks_number"]
+							);
+							
+				var second_point =
+					date_scale(successor_node["date"]) 
+						+ ","
+						+ rest_tasks_number_scale(
+								predecessor_node["rest_tasks_number"]
+							);
+							
+				var third_point =
+					date_scale(successor_node["date"]) 
+						+ ","
+						+ rest_tasks_number_scale(
+								successor_node["rest_tasks_number"]
+							);
+							
+				var points =
+					first_point
+						+ " " + second_point
+						+ " " + third_point;
+						
+						
+				return points;
+			}
+			
+			
+			
+			// Добавление полилиний, отображающих переходы
+			graph.selectAll()
+				.data(transitions["shifts"])
+				.enter()
+				
+				.append("polyline")
+				.classed("shift", true)
+				
+				.attr("points", compute_shift_points);
+	}
 	
-	render_transitions(
-		data["schedule"],
-		"schedule_nodes",
-		"schedule_shifts"
-	);
+	
+	
+	
+	
+	// Прорисовка диаграммы
+		// Установка общих свойств диаграммы
+		chart
+			.style("width", chart_parameters["width"] + "px")
+			.style("height", chart_parameters["height"] + "px");
+			
+			
+			
+		// Прорисовка структурных элементов диаграммы
+		render_structural_elements();
+		
+		
+		
+		// Прорисовка графиков
+			// Прорисовка первого графика
+			var implementation_graph =
+				chart
+					.append("g")
+					.attr("id", "implementation_graph");
+					
+			render_transitions(
+				data["implementation"],
+				implementation_graph
+			);
+			
+			
+			// Прорисовка первого графика
+			var schedule_graph =
+				chart
+					.append("g")
+					.attr("id", "schedule_graph");
+					
+			render_transitions(
+				data["schedule"],
+				schedule_graph
+			);
 }
 
 
@@ -271,7 +384,8 @@ function render_burndown_chart(container_element) {
 	var data  = prepare_data();
 	var chart =
 		d3.select("#" + container_element_id)
-			.append("svg");
+			.append("svg")
+			.attr("id", "chart");
 			
 	render_data(data, chart);
 }
