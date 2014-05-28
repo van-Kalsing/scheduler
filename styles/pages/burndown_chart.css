@@ -22,6 +22,20 @@
 
 
 
+#content #chart #rest_tasks_number_axis {
+	fill:         none;
+	stroke:       #555;
+	stroke-width: 0.5;
+}
+
+#content #chart .rest_tasks_number_line {
+	fill:         none;
+	stroke:       #555;
+	stroke-width: 0.5;
+}
+
+
+
 
 
 #content #chart .node .outer {
@@ -36,8 +50,6 @@
 	fill:         none;
 	stroke-width: 1;
 }
-
-
 
 
 

@@ -1,8 +1,15 @@
 var chart_parameters =
 	{
-		"width"   : 700,
-		"height"  : 500,
-		"padding" : 10,
+		"width"                  : 700,
+		"height"                 : 400,
+		"graphs_padding_left"    : 30,
+		"graphs_padding_right"   : 10,
+		"graphs_padding_top"     : 10,
+		"graphs_padding_bottom"  : 10,
+		"rest_tasks_number_grid" :
+			{
+				"layers_maximal_number" : 5,
+			},
 	};
 	
 	
@@ -14,11 +21,11 @@ function prepare_data() {
 	//!!!!! Получить данные из БД
 	var data =
 		{
-			"tasks_number" : 4,
+			"tasks_number" : 7,
 			
 			"work_start_date" : new Date("4/23/2014"),
 			
-			"work_end_date" : new Date("5/20/2014"),
+			"work_end_date" : new Date("5/27/2014"),
 			
 			"schedule" :
 				[
@@ -33,6 +40,14 @@ function prepare_data() {
 					{
 						"date"  : new Date("5/20/2014"),
 						"tasks" : [4],
+					},
+					{
+						"date"  : new Date("5/21/2014"),
+						"tasks" : [5, 6],
+					},
+					{
+						"date"  : new Date("5/27/2014"),
+						"tasks" : [7],
 					},
 				],
 				
@@ -162,8 +177,9 @@ function render_data(data, chart) {
 				data["work_end_date"].getTime(),
 			])
 			.range([
-				chart_parameters["padding"],
-				chart_parameters["width"] - chart_parameters["padding"]
+				chart_parameters["graphs_padding_left"],
+				chart_parameters["width"]
+					- chart_parameters["graphs_padding_right"]
 			]);
 			
 			
@@ -174,8 +190,9 @@ function render_data(data, chart) {
 				data["tasks_number"]
 			])
 			.range([
-				chart_parameters["height"] - chart_parameters["padding"],
-				chart_parameters["padding"]
+				chart_parameters["height"]
+					- chart_parameters["graphs_padding_bottom"],
+				chart_parameters["graphs_padding_top"]
 			]);
 			
 			
@@ -184,6 +201,7 @@ function render_data(data, chart) {
 			
 	// Функция прорисовки структурных элементов диаграммы
 	function render_structural_elements() {
+		// Добавление линии даты
 		chart
 			.append("line")
 			.attr("id", "date_line")
@@ -194,6 +212,61 @@ function render_data(data, chart) {
 			.attr("y1", 0)
 			.attr("x2", 0)
 			.attr("y2", chart_parameters["height"]);
+			
+			
+			
+		// Добавление горизонтальной сетки
+			grid = chart_parameters["rest_tasks_number_grid"]
+			
+			
+			// Вычисление числа уровней сетки и расстояния между ними
+			var lines_number =
+				Math.min(
+					grid["layers_maximal_number"],
+					data["tasks_number"] + 1
+				);
+				
+			var lines_relative_distance =
+				- Math.floor(
+					- (data["tasks_number"] + 1) / lines_number
+				);
+				
+				
+			// Добавление горизонтальных линий
+			for (var line_index = 0; line_index < lines_number; ++line_index) {
+				var line_relative_position =
+					data["tasks_number"]
+						- line_index * lines_relative_distance;
+						
+				if (line_relative_position >= 0) {
+					var line_position =
+						rest_tasks_number_scale(
+							line_relative_position
+						);
+						
+					chart
+						.append("line")
+						.classed("rest_tasks_number_line", true)
+						
+						.attr("x1", 20)
+						.attr("y1", line_position)
+						.attr("x2", chart_parameters["width"])
+						.attr("y2", line_position);
+				} else {
+					break;
+				}
+			}
+			
+			
+			// Добавление координатной оси
+			chart
+				.append("line")
+				.attr("id", "rest_tasks_number_axis") //!!!!! Проверить перевод
+				
+				.attr("x1", 20) //!!!!! Перенести в параметры
+				.attr("y1", 0)  //!!!!! Перенести в параметры
+				.attr("x2", 20) //!!!!! Перенести в параметры
+				.attr("y2", chart_parameters["height"]); //!!!!! Перенести в параметры
 	}
 	
 	
