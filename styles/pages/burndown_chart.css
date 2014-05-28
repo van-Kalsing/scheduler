@@ -22,16 +22,23 @@
 
 
 
-#content #chart #rest_tasks_number_axis {
+#content #chart #rest_tasks_number_grid #axis {
 	fill:         none;
 	stroke:       #555;
 	stroke-width: 0.5;
 }
 
-#content #chart .rest_tasks_number_line {
+#content #chart #rest_tasks_number_grid .line {
 	fill:         none;
 	stroke:       #555;
 	stroke-width: 0.5;
+}
+
+#content #chart #rest_tasks_number_grid .caption {
+	fill:               #555;
+	font-size:          14px;
+	alignment-baseline: central;
+	text-anchor:        middle;
 }
 
 

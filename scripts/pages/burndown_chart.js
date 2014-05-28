@@ -1,14 +1,33 @@
 var chart_parameters =
 	{
-		"width"                  : 700,
-		"height"                 : 400,
-		"graphs_padding_left"    : 30,
-		"graphs_padding_right"   : 10,
-		"graphs_padding_top"     : 10,
-		"graphs_padding_bottom"  : 10,
-		"rest_tasks_number_grid" :
+		"width"  : 700,
+		"height" : 400,
+		
+		"graphs_parameters" :
+			{
+				"area_left"   : 45,
+				"area_right"  : 685,
+				"area_top"    : 10,
+				"area_bottom" : 390,
+			},
+			
+		"dates_grid_parameters" :
+			{
+				
+			},
+			
+		"rest_tasks_number_grid_parameters" :
 			{
 				"layers_maximal_number" : 5,
+				
+				"axis_x"      : 30,
+				"axis_top"    : 0,
+				"axis_bottom" : 400,
+				
+				"lines_left"  : 30,
+				"lines_right" : 700,
+				
+				"captions_x" : 15,
 			},
 	};
 	
@@ -170,6 +189,8 @@ function prepare_data() {
 
 function render_data(data, chart) {
 	// Определение масштабов
+	var graphs_parameters = chart_parameters["graphs_parameters"];
+	
 	var date_scale =
 		d3.scale.linear()
 			.domain([
@@ -177,9 +198,8 @@ function render_data(data, chart) {
 				data["work_end_date"].getTime(),
 			])
 			.range([
-				chart_parameters["graphs_padding_left"],
-				chart_parameters["width"]
-					- chart_parameters["graphs_padding_right"]
+				graphs_parameters["area_left"],
+				graphs_parameters["area_right"]
 			]);
 			
 			
@@ -190,9 +210,8 @@ function render_data(data, chart) {
 				data["tasks_number"]
 			])
 			.range([
-				chart_parameters["height"]
-					- chart_parameters["graphs_padding_bottom"],
-				chart_parameters["graphs_padding_top"]
+				graphs_parameters["area_bottom"],
+				graphs_parameters["area_top"]
 			]);
 			
 			
@@ -201,6 +220,11 @@ function render_data(data, chart) {
 			
 	// Функция прорисовки структурных элементов диаграммы
 	function render_structural_elements() {
+		var grid            = null;
+		var grid_parameters = null;
+		
+		
+		
 		// Добавление линии даты
 		chart
 			.append("line")
@@ -215,14 +239,36 @@ function render_data(data, chart) {
 			
 			
 			
-		// Добавление горизонтальной сетки
-			grid = chart_parameters["rest_tasks_number_grid"]
-			
-			
+		// Прорисовка горизонтальной сетки
+			// Создание группы элементов, составляющих горизонтальную сетку
+			grid =
+				chart
+					.append("g")
+					.attr("id", "rest_tasks_number_grid");
+					
+			grid_parameters =
+				chart_parameters[
+					"rest_tasks_number_grid_parameters"
+				];
+				
+				
+				
+			// Добавление координатной оси
+			grid
+				.append("line")
+				.attr("id", "axis")
+				
+				.attr("x1", grid_parameters["axis_x"])
+				.attr("y1", grid_parameters["axis_top"])
+				.attr("x2", grid_parameters["axis_x"])
+				.attr("y2", grid_parameters["axis_bottom"]);
+				
+				
+				
 			// Вычисление числа уровней сетки и расстояния между ними
 			var lines_number =
 				Math.min(
-					grid["layers_maximal_number"],
+					grid_parameters["layers_maximal_number"],
 					data["tasks_number"] + 1
 				);
 				
@@ -232,7 +278,8 @@ function render_data(data, chart) {
 				);
 				
 				
-			// Добавление горизонтальных линий
+				
+			// Прорисовка уровней сетки
 			for (var line_index = 0; line_index < lines_number; ++line_index) {
 				var line_relative_position =
 					data["tasks_number"]
@@ -244,29 +291,30 @@ function render_data(data, chart) {
 							line_relative_position
 						);
 						
-					chart
-						.append("line")
-						.classed("rest_tasks_number_line", true)
 						
-						.attr("x1", 20)
+					// Добавление линий сетки
+					grid
+						.append("line")
+						.classed("line", true)
+						
+						.attr("x1", grid_parameters["lines_left"])
 						.attr("y1", line_position)
-						.attr("x2", chart_parameters["width"])
+						.attr("x2", grid_parameters["lines_right"])
 						.attr("y2", line_position);
+						
+						
+					// Добавление подписей сетки
+					grid
+						.append("text")
+						.classed("caption", true)
+						
+						.attr("x", grid_parameters["captions_x"])
+						.attr("y", line_position)
+						.text(line_relative_position)
 				} else {
 					break;
 				}
 			}
-			
-			
-			// Добавление координатной оси
-			chart
-				.append("line")
-				.attr("id", "rest_tasks_number_axis") //!!!!! Проверить перевод
-				
-				.attr("x1", 20) //!!!!! Перенести в параметры
-				.attr("y1", 0)  //!!!!! Перенести в параметры
-				.attr("x2", 20) //!!!!! Перенести в параметры
-				.attr("y2", chart_parameters["height"]); //!!!!! Перенести в параметры
 	}
 	
 	
