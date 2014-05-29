@@ -43,6 +43,32 @@ var chart_parameters =
 	};
 	
 	
+var legend_parameters =
+	{
+		"x"      : 50,
+		"y"      : -106,
+		"width"  : 241,
+		"height" : 50,
+		
+		"graphs_left"       : 15,
+		"graphs_right"      : 55,
+		"graphs_captions_x" : 70,
+		
+		"implementation_graph_y"       : 15,
+		"implementation_graph_caption" : "Фактический график",
+		
+		"schedule_graph_y"       : 35,
+		"schedule_graph_caption" : "Запланированный график",
+		
+		"background_parameters" :
+			{
+				"minimal_opacity_color" : "rgba(255, 255, 255, 0.2)",
+				"maximal_opacity_color" : "rgba(255, 255, 255, 0.8)",
+				"animation_duration"    : 300,
+			},
+	}
+	
+	
 	
 	
 	
@@ -474,86 +500,6 @@ function render_data(data, chart) {
 	
 	// Функция прорисовки графиков
 	function render_transitions(transitions, graph, indicators) {
-		// Прорисовка узлов
-			// Вспомогательные функции вычисления координат элементов,
-			// отображающих узлы
-			function scale_node_date(node) {
-				var scaled_date =
-					date_scale(
-						node["date"]
-					);
-					
-				return scaled_date;
-			}
-			
-			
-			function scale_node_rest_tasks_number(node) {
-				var scaled_rest_tasks_number =
-					rest_tasks_number_scale(
-						node["rest_tasks_number"]
-					);
-					
-				return scaled_rest_tasks_number;
-			}
-			
-			
-			
-			// Вспомогательные функции обработки наведения указателя мыши на
-			// элементы отображающие узелы
-			function activate_node(node) {
-				var scaled_date = date_scale(node["date"]);
-				
-				chart.select("#dates_grid #line")
-					.classed("active", true)
-					.classed("passive", false)
-					
-					.attr("x1", scaled_date)
-					.attr("x2", scaled_date);
-			}
-			
-			
-			function deactivate_node(node) {
-				chart.select("#dates_grid #line")
-					.classed("active", false)
-					.classed("passive", true);
-			}
-			
-			
-			
-			// Создание групп элементов, отображающих узлы
-			var nodes =
-				graph.selectAll()
-					.data(transitions["nodes"])
-					.enter()
-					
-					.append("g")
-					.classed("node", true);
-					
-					
-			// Добавление внутренних кругов (видимых всегда)
-			nodes
-				.append("circle")
-				.classed("inner", true)
-				
-				.attr("r", 3)
-				.attr("cx", scale_node_date)
-				.attr("cy", scale_node_rest_tasks_number);
-				
-				
-			// Добавление внешних кругов (видимых при наведнии указателя мыши)
-			nodes
-				.append("circle")
-				.classed("outer", true)
-				
-				.attr("r", 5)
-				.attr("cx", scale_node_date)
-				.attr("cy", scale_node_rest_tasks_number)
-				
-				.on("mouseover", activate_node)
-				.on("mouseout", deactivate_node);
-				
-				
-				
 		// Прорисовка переходов
 			// Вспомогательная функция вычисления точек полилинии,
 			// отображающей переход
@@ -603,6 +549,88 @@ function render_data(data, chart) {
 				.classed("shift", true)
 				
 				.attr("points", compute_shift_points);
+				
+				
+				
+		// Прорисовка узлов
+			// Вспомогательные функции вычисления координат элементов,
+			// отображающих узлы
+			function scale_node_date(node) {
+				var scaled_date =
+					date_scale(
+						node["date"]
+					);
+					
+				return scaled_date;
+			}
+			
+			
+			function scale_node_rest_tasks_number(node) {
+				var scaled_rest_tasks_number =
+					rest_tasks_number_scale(
+						node["rest_tasks_number"]
+					);
+					
+				return scaled_rest_tasks_number;
+			}
+			
+			
+			
+			// Вспомогательные функции обработки наведения указателя мыши на
+			// элементы отображающие узлы
+			function activate_node(node) {
+				var scaled_date = date_scale(node["date"]);
+				
+				chart.select("#dates_grid #line")
+					.classed("active", true)
+					.classed("passive", false)
+					
+					.attr("x1", scaled_date)
+					.attr("x2", scaled_date);
+			}
+			
+			
+			function deactivate_node(node) {
+				chart.select("#dates_grid #line")
+					.classed("active", false)
+					.classed("passive", true);
+			}
+			
+			
+			
+			// Создание групп элементов, отображающих узлы
+			var nodes =
+				graph.selectAll()
+					.data(transitions["nodes"])
+					.enter()
+					
+					.append("g")
+					.classed("node", true);
+					
+					
+					
+			// Добавление внутренних кругов (видимых всегда)
+			nodes
+				.append("circle")
+				.classed("inner", true)
+				
+				.attr("r", 3)
+				.attr("cx", scale_node_date)
+				.attr("cy", scale_node_rest_tasks_number);
+				
+				
+				
+			// Добавление внешних кругов (видимых при наведнии указателя мыши)
+			nodes
+				.append("circle")
+				.classed("outer", true)
+				
+				.attr("r", 5)
+				.attr("cx", scale_node_date)
+				.attr("cy", scale_node_rest_tasks_number)
+				
+				.on("mouseover", activate_node)
+				.on("mouseout", deactivate_node);
 	}
 	
 	
@@ -621,11 +649,13 @@ function render_data(data, chart) {
 					];
 					
 					
+					
 				// Определение класса индикатора
 				var nodes_relation_class =
 					nodes_relation_type == "lead"
 						? "lead_indicator"
 						: "lag_indicator";
+						
 						
 						
 				// Определение позиции и ширины индикатора
@@ -641,6 +671,7 @@ function render_data(data, chart) {
 						implementation_node["date"]
 					);
 					
+					
 				var indicator_position =
 					date_scale(
 						indicator_relative_left
@@ -649,6 +680,7 @@ function render_data(data, chart) {
 				var indicator_width =
 					date_scale(indicator_relative_right)
 						- date_scale(indicator_relative_left);
+						
 						
 						
 				// Добавление индикатора
@@ -724,15 +756,187 @@ function render_data(data, chart) {
 
 
 
+function render_legend(legend) {
+	legend
+		.style({
+			"float"    : "left",
+			"position" : "relative",
+			"top"      : legend_parameters["y"] + "px",
+			"left"     : legend_parameters["x"] + "px",
+			"width"    : legend_parameters["width"] + "px",
+			"height"   : legend_parameters["height"] + "px",
+		});
+		
+		
+		
+	// Прорисовка фона легедны
+		var background_parameters = legend_parameters["background_parameters"];
+		
+		
+		
+		// Добавление элемента, формирующего фон
+		legend
+			.append("rect")
+			.attr("id", "background")
+			
+			.attr("x", 0)
+			.attr("y", 0)
+			.attr("width", legend_parameters["width"])
+			.attr("height", legend_parameters["height"])
+			
+			.style("fill", background_parameters["maximal_opacity_color"]);
+			
+			
+			
+		// Изменение прозрачности фона при наведении указателя мыши
+		function increase_opacity() {
+			legend.select("#background")
+				.transition()
+				.duration(background_parameters["animation_duration"])
+				.ease("out-in")
+				
+				.style("fill", background_parameters["maximal_opacity_color"]);
+		}
+		
+		function decrease_opacity() {
+			legend.select("#background")
+				.transition()
+				.duration(background_parameters["animation_duration"])
+				.ease("out-in")
+				
+				.style("fill", background_parameters["minimal_opacity_color"]);
+		}
+		
+		
+		legend
+			.on("mouseover", decrease_opacity)
+			.on("mouseout", increase_opacity);
+			
+			
+			
+	// Прорисовка легенды запланированного графика 
+		// Добавление группы элементов, образующих легенду графика
+		var schedule_graph =
+			legend
+				.append("g")
+				.attr("id", "schedule_graph");
+				
+				
+				
+		// Добавление обозначения перехода
+		schedule_graph
+			.append("line")
+			.classed("shift", true)
+			
+			.attr("x1", legend_parameters["graphs_left"])
+			.attr("y1", legend_parameters["schedule_graph_y"])
+			.attr("x2", legend_parameters["graphs_right"])
+			.attr("y2", legend_parameters["schedule_graph_y"]);
+			
+			
+			
+		// Добавление обозначений узлов
+		schedule_graph
+			.append("circle")
+			.classed("node", true)
+			
+			.attr("cx", legend_parameters["graphs_left"])
+			.attr("cy", legend_parameters["schedule_graph_y"])
+			.attr("r", 3);
+			
+			
+		schedule_graph
+			.append("circle")
+			.classed("node", true)
+			
+			.attr("cx", legend_parameters["graphs_right"])
+			.attr("cy", legend_parameters["schedule_graph_y"])
+			.attr("r", 3);
+			
+			
+			
+		// Добавление подписи обозначений
+		schedule_graph
+			.append("text")
+			.classed("caption", true)
+			
+			.attr("x", legend_parameters["graphs_captions_x"])
+			.attr("y", legend_parameters["schedule_graph_y"])
+			.text(legend_parameters["schedule_graph_caption"]);
+			
+			
+			
+	// Прорисовка легенды запланированного графика 
+		// Добавление группы элементов, образующих легенду графика
+		var implementation_graph =
+			legend
+				.append("g")
+				.attr("id", "implementation_graph");
+				
+				
+				
+		// Добавление обозначения перехода
+		implementation_graph
+			.append("line")
+			.classed("shift", true)
+			
+			.attr("x1", legend_parameters["graphs_left"])
+			.attr("y1", legend_parameters["implementation_graph_y"])
+			.attr("x2", legend_parameters["graphs_right"])
+			.attr("y2", legend_parameters["implementation_graph_y"]);
+			
+			
+			
+		// Добавление обозначений узлов
+		implementation_graph
+			.append("circle")
+			.classed("node", true)
+			
+			.attr("cx", legend_parameters["graphs_left"])
+			.attr("cy", legend_parameters["implementation_graph_y"])
+			.attr("r", 3);
+			
+			
+		implementation_graph
+			.append("circle")
+			.classed("node", true)
+			
+			.attr("cx", legend_parameters["graphs_right"])
+			.attr("cy", legend_parameters["implementation_graph_y"])
+			.attr("r", 3);
+			
+			
+			
+		// Добавление подписи обозначений
+		implementation_graph
+			.append("text")
+			.classed("caption", true)
+			
+			.attr("x", legend_parameters["graphs_captions_x"])
+			.attr("y", legend_parameters["implementation_graph_y"])
+			.text(legend_parameters["implementation_graph_caption"]);
+}
+
+
+
+
+
 function render_burndown_chart(container_element) {
 	var container_element_id = container_element.attr("id");
 	
 	
 	var data  = prepare_data();
+	
 	var chart =
 		d3.select("#" + container_element_id)
 			.append("svg")
 			.attr("id", "chart");
 			
+	var legend =
+		d3.select("#" + container_element_id)
+			.append("svg")
+			.attr("id", "legend");
+			
 	render_data(data, chart);
+	render_legend(legend);
 }

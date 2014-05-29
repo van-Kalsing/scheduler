@@ -105,3 +105,53 @@
 	fill: #FDD;
 }
 
+
+
+
+
+
+
+#content #legend {
+	border:        1px solid #555;
+	border-radius: 4px;
+}
+
+
+
+
+
+#content #legend .node {
+	/* ... */
+}
+
+#content #legend .shift {
+	fill:         none;
+	stroke-width: 1;
+}
+
+#content #legend .caption {
+	fill:              #555;
+	font-size:         14px;
+	dominant-baseline: central;
+	text-anchor:       start;
+}
+
+
+
+#content #legend #schedule_graph .node {
+	fill: #000;
+}
+
+#content #legend #schedule_graph .shift {
+	stroke: #000;
+}
+
+
+
+#content #legend #implementation_graph .node {
+	fill: #F00;
+}
+
+#content #legend #implementation_graph .shift {
+	stroke: #F00;
+}
