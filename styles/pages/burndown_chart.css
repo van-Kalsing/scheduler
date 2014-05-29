@@ -6,19 +6,34 @@
 
 
 
-#content #chart #date_line {
+#content #chart #dates_grid #axis {
+	fill:         none;
+	stroke:       #555;
+	stroke-width: 0.5;
+}
+
+#content #chart #dates_grid #line {
 	fill:             none;
 	stroke-width:     0.5;
 	stroke-dasharray: 10, 10;
 }
 
-#content #chart #date_line.active {
+#content #chart #dates_grid #line.active {
 	stroke: #F00;
 }
 
-#content #chart #date_line.passive {
+#content #chart #dates_grid #line.passive {
 	stroke: none;
 }
+
+#content #chart #dates_grid .caption {
+	fill:               #555;
+	font-size:          14px;
+	alignment-baseline: central;
+	text-anchor:        middle;
+}
+
+
 
 
 

@@ -5,15 +5,23 @@ var chart_parameters =
 		
 		"graphs_parameters" :
 			{
-				"area_left"   : 45,
-				"area_right"  : 685,
+				"area_left"   : 75,
+				"area_right"  : 655,
 				"area_top"    : 10,
-				"area_bottom" : 390,
+				"area_bottom" : 355,
 			},
 			
 		"dates_grid_parameters" :
 			{
+				"axis_y"     : 370,
+				"axis_left"  : 30,
+				"axis_right" : 700,
 				
+				"line_top"    : 0,
+				"line_bottom" : 370,
+				
+				"captions_number" : 5,
+				"captions_y"      : 385,
 			},
 			
 		"rest_tasks_number_grid_parameters" :
@@ -22,7 +30,7 @@ var chart_parameters =
 				
 				"axis_x"      : 30,
 				"axis_top"    : 0,
-				"axis_bottom" : 400,
+				"axis_bottom" : 370,
 				
 				"lines_left"  : 30,
 				"lines_right" : 700,
@@ -225,17 +233,107 @@ function render_data(data, chart) {
 		
 		
 		
-		// Добавление линии даты
-		chart
-			.append("line")
-			.attr("id", "date_line")
-			.classed("active", false)
-			.classed("passive", true)
+		// Прорисовка вертикальной сетки
+			// Создание группы элементов, составляющих вертикальную сетку
+			grid =
+				chart
+					.append("g")
+					.attr("id", "dates_grid");
+					
+			grid_parameters =
+				chart_parameters[
+					"dates_grid_parameters"
+				];
+				
+				
+				
+			// Добавление координатной оси
+			grid
+				.append("line")
+				.attr("id", "axis")
+				
+				.attr("x1", grid_parameters["axis_left"])
+				.attr("y1", grid_parameters["axis_y"])
+				.attr("x2", grid_parameters["axis_right"])
+				.attr("y2", grid_parameters["axis_y"]);
+				
+				
+				
+			// Добавление линии даты
+			grid
+				.append("line")
+				.attr("id", "line")
+				.classed("active", false)
+				.classed("passive", true)
+				
+				.attr("x1", 0)
+				.attr("y1", grid_parameters["line_top"])
+				.attr("x2", 0)
+				.attr("y2", grid_parameters["line_bottom"]);
+				
+				
+				
+			// Вычисление расстояния между подписями дат
+			var captions_number = grid_parameters["captions_number"];
 			
-			.attr("x1", 0)
-			.attr("y1", 0)
-			.attr("x2", 0)
-			.attr("y2", chart_parameters["height"]);
+			/* Производится округление до ближайшего целого большего
+				вычисленного расстояния, т.к. иначе, из-за того, что моменты,
+				времени соответствующие узлам, приходятся на первую миллисекунду
+				суток, округление к меньшему целому может привести к выводу
+				предыдущих суток (а дата, соответствующая последнему узлу,
+				должна совпадать с датой окончания работы) */
+			var captions_relative_distance =
+				- Math.floor(
+					- (data["work_end_date"] - data["work_start_date"]) /
+						(captions_number - 1)
+				);
+				
+				
+				
+			// Прорисовка подписей дат
+			var caption_index = 0;
+			
+			for (; caption_index < captions_number; ++caption_index) {
+				// Вычисление позиции подписи даты
+				var line_relative_position =
+					caption_index * captions_relative_distance
+						+ data["work_start_date"].getTime();
+						
+				var caption_position =
+					date_scale(
+						line_relative_position
+					);
+					
+					
+				// Определение текста подписи даты
+				var caption_date  = new Date(line_relative_position);
+				var caption_day   = caption_date.getDate();
+				var caption_month = caption_date.getMonth() + 1;
+				var caption_year  = caption_date.getFullYear();
+				
+				if (caption_day < 10) {
+					caption_day = "0" + caption_day;
+				}
+				
+				if (caption_month < 10) {
+					caption_month = "0" + caption_month;
+				}
+				
+				var caption_text =
+					caption_day + "."
+						+ caption_month + "."
+						+ caption_year;
+						
+						
+				// Добавление подписи даты
+				grid
+					.append("text")
+					.classed("caption", true)
+					
+					.attr("x", caption_position)
+					.attr("y", grid_parameters["captions_y"])
+					.text(caption_text);
+			}
 			
 			
 			
@@ -292,7 +390,7 @@ function render_data(data, chart) {
 						);
 						
 						
-					// Добавление линий сетки
+					// Добавление линии сетки
 					grid
 						.append("line")
 						.classed("line", true)
@@ -303,14 +401,14 @@ function render_data(data, chart) {
 						.attr("y2", line_position);
 						
 						
-					// Добавление подписей сетки
+					// Добавление подписи сетки
 					grid
 						.append("text")
 						.classed("caption", true)
 						
 						.attr("x", grid_parameters["captions_x"])
 						.attr("y", line_position)
-						.text(line_relative_position)
+						.text(line_relative_position);
 				} else {
 					break;
 				}
@@ -350,7 +448,7 @@ function render_data(data, chart) {
 			function activate_node(node) {
 				var scaled_date = date_scale(node["date"]);
 				
-				chart.select("#date_line")
+				chart.select("#dates_grid #line")
 					.classed("active", true)
 					.classed("passive", false)
 					
@@ -360,7 +458,7 @@ function render_data(data, chart) {
 			
 			
 			function deactivate_node(node) {
-				chart.select("#date_line")
+				chart.select("#dates_grid #line")
 					.classed("active", false)
 					.classed("passive", true);
 			}
