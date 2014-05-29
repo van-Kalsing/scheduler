@@ -9,6 +9,9 @@ var chart_parameters =
 				"area_right"  : 655,
 				"area_top"    : 10,
 				"area_bottom" : 355,
+				
+				"indicators_top"    : 10,
+				"indicators_bottom" : 370,
 			},
 			
 		"dates_grid_parameters" :
@@ -156,6 +159,57 @@ function prepare_data() {
 	}
 	
 	
+	var schedule_transitions =
+		prepare_transitions(
+			data["schedule"]
+		);
+		
+	var implementation_transitions =
+		prepare_transitions(
+			data["implementation"]
+		);
+		
+		
+		
+	// Определение связанных узлов
+	var nodes_relations = new Array();
+	
+	
+	var schedule_nodes       = schedule_transitions["nodes"];
+	var implementation_nodes = implementation_transitions["nodes"];
+	
+	schedule_nodes.forEach(function(schedule_node) {
+		implementation_nodes.forEach(function(implementation_node) {
+			var are_nodes_related =
+				schedule_node["rest_tasks_number"]
+					== implementation_node["rest_tasks_number"];
+					
+			if (are_nodes_related) {
+				var nodes_relation_type = "exact";
+				
+				if (implementation_node["date"] < schedule_node["date"]) {
+					nodes_relation_type = "lead";
+				}
+				
+				if (implementation_node["date"] > schedule_node["date"]) {
+					nodes_relation_type = "lag";
+				}
+				
+				
+				var nodes_relation =
+					{
+						"schedule_node"       : schedule_node,
+						"implementation_node" : implementation_node,
+						"type"                : nodes_relation_type
+					};
+					
+				nodes_relations.push(nodes_relation);
+			}
+		});
+	});
+	
+	
+	
 	// Определение дат, которым соответствуют узлы
 	// function prepare_dates() {
 	// 	var dates_times = new Array();
@@ -181,8 +235,9 @@ function prepare_data() {
 			"tasks_number"    : data["tasks_number"],
 			"work_start_date" : data["work_start_date"],
 			"work_end_date"   : data["work_end_date"],
-			"schedule"        : prepare_transitions(data["schedule"]),
-			"implementation"  : prepare_transitions(data["implementation"]),
+			"schedule"        : schedule_transitions,
+			"implementation"  : implementation_transitions,
+			"nodes_relations"   : nodes_relations,
 			// "dates"           : prepare_dates(),
 		};
 		
@@ -417,8 +472,8 @@ function render_data(data, chart) {
 	
 	
 	
-	// Функция прорисовки узлов и переходов
-	function render_transitions(transitions, graph) {
+	// Функция прорисовки графиков
+	function render_transitions(transitions, graph, indicators) {
 		// Прорисовка узлов
 			// Вспомогательные функции вычисления координат элементов,
 			// отображающих узлы
@@ -552,6 +607,69 @@ function render_data(data, chart) {
 	
 	
 	
+	// Функция прорисовки индикаторов
+	function render_indicators(indicators) {
+		data["nodes_relations"].forEach(function(nodes_relation) {
+			var nodes_relation_type = nodes_relation["type"];
+			
+			if (nodes_relation_type != "exact") {
+				// Извлечение связанных узлов
+				var schedule_node       = nodes_relation["schedule_node"];
+				var implementation_node =
+					nodes_relation[
+						"implementation_node"
+					];
+					
+					
+				// Определение класса индикатора
+				var nodes_relation_class =
+					nodes_relation_type == "lead"
+						? "lead_indicator"
+						: "lag_indicator";
+						
+						
+				// Определение позиции и ширины индикатора
+				var indicator_relative_left =
+					Math.min(
+						schedule_node["date"],
+						implementation_node["date"]
+					);
+					
+				var indicator_relative_right =
+					Math.max(
+						schedule_node["date"],
+						implementation_node["date"]
+					);
+					
+				var indicator_position =
+					date_scale(
+						indicator_relative_left
+					);
+					
+				var indicator_width =
+					date_scale(indicator_relative_right)
+						- date_scale(indicator_relative_left);
+						
+						
+				// Добавление индикатора
+				indicators
+					.append("rect")
+					.classed(nodes_relation_class, true)
+					
+					.attr("x", indicator_position)
+					.attr("y", graphs_parameters["indicators_top"])
+					.attr("width", indicator_width)
+					.attr(
+						"height",
+						graphs_parameters["indicators_bottom"]
+							- graphs_parameters["indicators_top"]
+					);
+			}
+		});
+	}
+	
+	
+	
 	
 	
 	// Прорисовка диаграммы
@@ -562,25 +680,23 @@ function render_data(data, chart) {
 			
 			
 			
+		// Прорисовка индикаторов
+		var indicators =
+			chart
+				.append("g")
+				.attr("id", "indicators");
+				
+		render_indicators(indicators);
+		
+		
+		
 		// Прорисовка структурных элементов диаграммы
 		render_structural_elements();
 		
 		
 		
 		// Прорисовка графиков
-			// Прорисовка первого графика
-			var implementation_graph =
-				chart
-					.append("g")
-					.attr("id", "implementation_graph");
-					
-			render_transitions(
-				data["implementation"],
-				implementation_graph
-			);
-			
-			
-			// Прорисовка первого графика
+			// Прорисовка запланированного графика
 			var schedule_graph =
 				chart
 					.append("g")
@@ -589,6 +705,18 @@ function render_data(data, chart) {
 			render_transitions(
 				data["schedule"],
 				schedule_graph
+			);
+			
+			
+			// Прорисовка фактического графика
+			var implementation_graph =
+				chart
+					.append("g")
+					.attr("id", "implementation_graph");
+					
+			render_transitions(
+				data["implementation"],
+				implementation_graph
 			);
 }
 

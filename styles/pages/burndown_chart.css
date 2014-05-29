@@ -27,10 +27,10 @@
 }
 
 #content #chart #dates_grid .caption {
-	fill:               #555;
-	font-size:          14px;
-	alignment-baseline: central;
-	text-anchor:        middle;
+	fill:              #555;
+	font-size:         14px;
+	dominant-baseline: central;
+	text-anchor:       middle;
 }
 
 
@@ -50,10 +50,10 @@
 }
 
 #content #chart #rest_tasks_number_grid .caption {
-	fill:               #555;
-	font-size:          14px;
-	alignment-baseline: central;
-	text-anchor:        middle;
+	fill:              #555;
+	font-size:         14px;
+	dominant-baseline: central;
+	text-anchor:       middle;
 }
 
 
@@ -92,3 +92,16 @@
 #content #chart #implementation_graph .shift {
 	stroke: #F00;
 }
+
+
+
+
+
+#content #chart #indicators .lead_indicator {
+	fill: #DFD;
+}
+
+#content #chart #indicators .lag_indicator {
+	fill: #FDD;
+}
+
