@@ -1,4 +1,5 @@
-function tabulate(data, columns) {
+function render_table_calendar(container_element) {
+		function tabulate(data, columns) {
     var table = d3.select("#container").append("table"),
         thead = table.append("thead"),
         tbody = table.append("tbody");
@@ -73,8 +74,6 @@ var Days = [
     {ПН: pre+29, ВТ:pre+30,СР:pre+31,ЧТ:" ",ПТ:" ",СБ:" ",ВС:" "},
 ];
 
-
-
 // render the table
 
 var ZTable = tabulate(Days, [ "ПН","ВТ","СР","ЧТ","ПТ","СБ","ВС"]);
@@ -91,34 +90,4 @@ ZTable.selectAll("tbody tr")
   .sort(function(a, b){
        return d3.descending(a.age, b.age);
     });
-body {
-    background-color: ghostwhite;
-}
-
-div {
-    position: absolute;
-    left: 50px;
-    top: 50px;
-}
-
-div1 {
-    position: absolute;
-    left: 200px;
-    top: 50px;
-}
-
-form1 {
-}
-
-td, th {
-    padding: 4px 4px;
-}
-
-th {
-    font-weight: bold;
-    background-color: lightgrey;
-}
-
-td {
-    background-color: #FFFACD;
-}
+}		
