@@ -5,61 +5,72 @@ var chart_parameters =
 		
 		"graphs_parameters" :
 			{
-				"area_left"   : 75,
+				"area_left"   : 105,
 				"area_right"  : 655,
 				"area_top"    : 10,
-				"area_bottom" : 355,
+				"area_bottom" : 325,
 				
 				"indicators_top"    : 10,
-				"indicators_bottom" : 370,
+				"indicators_bottom" : 340,
 			},
 			
 		"dates_grid_parameters" :
 			{
-				"axis_y"     : 370,
-				"axis_left"  : 30,
+				"axis_y"     : 340,
+				"axis_left"  : 60,
 				"axis_right" : 700,
 				
+				"axis_caption"   : "Дата",
+				"axis_caption_x" : 380,
+				"axis_caption_y" : 385,
+				
 				"line_top"    : 0,
-				"line_bottom" : 370,
+				"line_bottom" : 340,
 				
 				"captions_number" : 5,
-				"captions_y"      : 385,
+				"captions_y"      : 355,
 			},
 			
 		"rest_tasks_number_grid_parameters" :
 			{
 				"layers_maximal_number" : 5,
 				
-				"axis_x"      : 30,
+				"axis_x"      : 60,
 				"axis_top"    : 0,
-				"axis_bottom" : 370,
+				"axis_bottom" : 340,
 				
-				"lines_left"  : 30,
+				"axis_caption"   : "Количество нерешенных задач",
+				"axis_caption_x" : 20,
+				"axis_caption_y" : 170,
+				
+				"lines_left"  : 60,
 				"lines_right" : 700,
 				
-				"captions_x" : 15,
+				"captions_x" : 45,
 			},
 	};
 	
 	
 var legend_parameters =
 	{
-		"x"      : 50,
-		"y"      : -106,
+		"x"      : 80,
+		"y"      : -136,
 		"width"  : 241,
 		"height" : 50,
 		
-		"graphs_left"       : 15,
-		"graphs_right"      : 55,
-		"graphs_captions_x" : 70,
-		
-		"implementation_graph_y"       : 15,
-		"implementation_graph_caption" : "Фактический график",
-		
-		"schedule_graph_y"       : 35,
-		"schedule_graph_caption" : "Запланированный график",
-		
+		"graphs_parameters" :
+			{
+				"left"       : 15,
+				"right"      : 55,
+				"captions_x" : 70,
+				
+				"implementation_graph_y"       : 15,
+				"implementation_graph_caption" : "Фактический график",
+				
+				"schedule_graph_y"       : 35,
+				"schedule_graph_caption" : "Запланированный график",
+			},
+			
 		"background_parameters" :
 			{
 				"minimal_opacity_color" : "rgba(255, 255, 255, 0.2)",
@@ -236,26 +247,6 @@ function prepare_data() {
 	
 	
 	
-	// Определение дат, которым соответствуют узлы
-	// function prepare_dates() {
-	// 	var dates_times = new Array();
-	// 	var dates       = new Array();
-		
-		
-	// 	function prepare_dates(transitions) {
-	// 		transitions.forEach(function(transition) {
-	// 			var date_time = transition["date"].getTime();
-				
-	// 			if (dates_times.indexOf(date_time) == -1) {
-	// 				dates_times.push(date_time);
-	// 				dates.push(date);
-	// 			}
-	// 		});
-	// 	}
-	// 	data["schedule"]
-	// }
-	
-	
 	var prepared_data =
 		{
 			"tasks_number"    : data["tasks_number"],
@@ -264,7 +255,6 @@ function prepare_data() {
 			"schedule"        : schedule_transitions,
 			"implementation"  : implementation_transitions,
 			"nodes_relations"   : nodes_relations,
-			// "dates"           : prepare_dates(),
 		};
 		
 		
@@ -337,6 +327,15 @@ function render_data(data, chart) {
 				.attr("y1", grid_parameters["axis_y"])
 				.attr("x2", grid_parameters["axis_right"])
 				.attr("y2", grid_parameters["axis_y"]);
+				
+				
+			grid
+				.append("text")
+				.attr("id", "axis_caption")
+				
+				.attr("x", grid_parameters["axis_caption_x"])
+				.attr("y", grid_parameters["axis_caption_y"])
+				.text(grid_parameters["axis_caption"]);
 				
 				
 				
@@ -441,6 +440,21 @@ function render_data(data, chart) {
 				.attr("y1", grid_parameters["axis_top"])
 				.attr("x2", grid_parameters["axis_x"])
 				.attr("y2", grid_parameters["axis_bottom"]);
+				
+				
+			var rotate_transform =
+				"rotate(-90 "
+					+ grid_parameters["axis_caption_x"] + ","
+					+ grid_parameters["axis_caption_y"] + ")";
+					
+			grid
+				.append("text")
+				.attr("id", "axis_caption")
+				
+				.attr("x", grid_parameters["axis_caption_x"])
+				.attr("y", grid_parameters["axis_caption_y"])
+				.attr("transform", rotate_transform)
+				.text(grid_parameters["axis_caption"]);
 				
 				
 				
@@ -814,7 +828,12 @@ function render_legend(legend) {
 			
 			
 			
-	// Прорисовка легенды запланированного графика 
+	// Извлечение параметров графиков
+	var graphs_parameters = legend_parameters["graphs_parameters"]
+	
+	
+	
+	// Прорисовка легенды запланированного графика
 		// Добавление группы элементов, образующих легенду графика
 		var schedule_graph =
 			legend
@@ -828,10 +847,10 @@ function render_legend(legend) {
 			.append("line")
 			.classed("shift", true)
 			
-			.attr("x1", legend_parameters["graphs_left"])
-			.attr("y1", legend_parameters["schedule_graph_y"])
-			.attr("x2", legend_parameters["graphs_right"])
-			.attr("y2", legend_parameters["schedule_graph_y"]);
+			.attr("x1", graphs_parameters["left"])
+			.attr("y1", graphs_parameters["schedule_graph_y"])
+			.attr("x2", graphs_parameters["right"])
+			.attr("y2", graphs_parameters["schedule_graph_y"]);
 			
 			
 			
@@ -840,8 +859,8 @@ function render_legend(legend) {
 			.append("circle")
 			.classed("node", true)
 			
-			.attr("cx", legend_parameters["graphs_left"])
-			.attr("cy", legend_parameters["schedule_graph_y"])
+			.attr("cx", graphs_parameters["left"])
+			.attr("cy", graphs_parameters["schedule_graph_y"])
 			.attr("r", 3);
 			
 			
@@ -849,8 +868,8 @@ function render_legend(legend) {
 			.append("circle")
 			.classed("node", true)
 			
-			.attr("cx", legend_parameters["graphs_right"])
-			.attr("cy", legend_parameters["schedule_graph_y"])
+			.attr("cx", graphs_parameters["right"])
+			.attr("cy", graphs_parameters["schedule_graph_y"])
 			.attr("r", 3);
 			
 			
@@ -860,9 +879,9 @@ function render_legend(legend) {
 			.append("text")
 			.classed("caption", true)
 			
-			.attr("x", legend_parameters["graphs_captions_x"])
-			.attr("y", legend_parameters["schedule_graph_y"])
-			.text(legend_parameters["schedule_graph_caption"]);
+			.attr("x", graphs_parameters["captions_x"])
+			.attr("y", graphs_parameters["schedule_graph_y"])
+			.text(graphs_parameters["schedule_graph_caption"]);
 			
 			
 			
@@ -880,10 +899,10 @@ function render_legend(legend) {
 			.append("line")
 			.classed("shift", true)
 			
-			.attr("x1", legend_parameters["graphs_left"])
-			.attr("y1", legend_parameters["implementation_graph_y"])
-			.attr("x2", legend_parameters["graphs_right"])
-			.attr("y2", legend_parameters["implementation_graph_y"]);
+			.attr("x1", graphs_parameters["left"])
+			.attr("y1", graphs_parameters["implementation_graph_y"])
+			.attr("x2", graphs_parameters["right"])
+			.attr("y2", graphs_parameters["implementation_graph_y"]);
 			
 			
 			
@@ -892,8 +911,8 @@ function render_legend(legend) {
 			.append("circle")
 			.classed("node", true)
 			
-			.attr("cx", legend_parameters["graphs_left"])
-			.attr("cy", legend_parameters["implementation_graph_y"])
+			.attr("cx", graphs_parameters["left"])
+			.attr("cy", graphs_parameters["implementation_graph_y"])
 			.attr("r", 3);
 			
 			
@@ -901,8 +920,8 @@ function render_legend(legend) {
 			.append("circle")
 			.classed("node", true)
 			
-			.attr("cx", legend_parameters["graphs_right"])
-			.attr("cy", legend_parameters["implementation_graph_y"])
+			.attr("cx", graphs_parameters["right"])
+			.attr("cy", graphs_parameters["implementation_graph_y"])
 			.attr("r", 3);
 			
 			
@@ -912,9 +931,9 @@ function render_legend(legend) {
 			.append("text")
 			.classed("caption", true)
 			
-			.attr("x", legend_parameters["graphs_captions_x"])
-			.attr("y", legend_parameters["implementation_graph_y"])
-			.text(legend_parameters["implementation_graph_caption"]);
+			.attr("x", graphs_parameters["captions_x"])
+			.attr("y", graphs_parameters["implementation_graph_y"])
+			.text(graphs_parameters["implementation_graph_caption"]);
 }
 
 

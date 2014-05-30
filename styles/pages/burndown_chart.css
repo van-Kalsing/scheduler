@@ -12,6 +12,13 @@
 	stroke-width: 0.5;
 }
 
+#content #chart #dates_grid #axis_caption {
+	fill:              #555;
+	font-size:         18px;
+	dominant-baseline: central;
+	text-anchor:       middle;
+}
+
 #content #chart #dates_grid #line {
 	fill:             none;
 	stroke-width:     0.5;
@@ -41,6 +48,13 @@
 	fill:         none;
 	stroke:       #555;
 	stroke-width: 0.5;
+}
+
+#content #chart #rest_tasks_number_grid #axis_caption {
+	fill:              #555;
+	font-size:         18px;
+	dominant-baseline: central;
+	text-anchor:       middle;
 }
 
 #content #chart #rest_tasks_number_grid .line {
