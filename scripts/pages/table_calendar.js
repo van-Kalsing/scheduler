@@ -1,6 +1,6 @@
 function render_table_calendar(container_element) {
 	container_element_id = container_element.attr("id");
-		function tabulate(data, columns) {
+function tabulate(data, columns) {
     var table = d3.select("#" + container_element_id).append("table"),
         thead = table.append("thead"),
         tbody = table.append("tbody");
@@ -33,7 +33,7 @@ function render_table_calendar(container_element) {
 }
 
 function tabulate1(data, columns) {
-    var table = d3.select("#container1").append("table"),
+    var table = d3.select("#" + container_element_id).append("table"),
         thead = table.append("thead"),
         tbody = table.append("tbody");
 
