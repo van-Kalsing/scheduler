@@ -20,6 +20,29 @@
 		<script type="text/javascript" src="scripts/pages/create_work.js"></script>
 		
 		<script type="text/javascript" src="scripts/template.js"></script>
+
+<style>
+#parent_popup { 
+// занимается затемнением 
+  background: #000;
+  height: 100%;
+  opacity: 0.9;
+  position: fixed; // перемещается вместе с прокруткой
+  width: 100%;
+  z-index: 100; // поверх всех окон
+  top: 0;
+  left: 0;
+}
+#popup {
+  background-color: #00f;
+  height: 200px;
+  position: fixed;
+  top: 100px;
+  left: 40%;
+  color: #f00;
+  width: 300px;
+}
+</style>
 	</head>
 	
 	<body>
@@ -95,5 +118,12 @@
 			<!--<div id="footer_block">
 			</div>-->
 		</div>
+<div id="parent_popup">
+  <div id="popup">
+    <p style="cursor: pointer;" onclick="document.getElementById ('parent_popup').style.display='none';">Закрыть</p>
+    <p>Текст в окне</p>
+  </div>
+</div>
+
 	</body>
 </html>

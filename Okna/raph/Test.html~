@@ -1,0 +1,139 @@
+<html>
+<head>
+<meta charset="windows-1251">
+</head>
+<body>
+
+<script src="js/raphael-min.js">
+</script>
+<head>
+<title>Таблица</title>
+<link rel="stylesheet" type="text/css" href="style/style.css" /> </head>
+<form>
+
+<input type=button name=anykey value="Нажми Any Key" onClick="scrup(27)">
+
+<button style="Position: absolute; top: 10px; left: 100px; Heigth: 20; width: 405" onClick="scrup(27)">
+Вверх</button>
+</form>
+
+<div id="ppr" style="position: absolute; top: 100px; weight: 505px; height: 500px"></div>
+<script language="JavaScript">
+
+function pressAnyKey() {
+alert("Нажата Any Key")
+}
+</script>
+
+<script>
+paper = new Raphael("ppr",505,500);
+
+var x = 100;
+var y = 50;
+var height = 50;
+var width = 50;
+var c1 = "SaddleBrown";
+var c2 = "GhostWhite";
+var c3 = "Snow";
+var dw;
+var d;
+d = 27;
+
+for (i=1;i<=7;i++)
+{
+switch (i) {
+case 1: dw = "MO";
+break
+case 2: dw = "TU";
+break
+case 3: dw = "WE";
+break
+case 4: dw = "TH";
+break
+case 5: dw = "FR";
+break
+case 6: dw = "SA";
+break
+case 7: dw = "SU";
+break
+}
+if (d<31) {
+d++
+} else
+{d=1;}
+WriteTableRow(x,y,c1,c2,c3,width,height,paper,dw + "," + d + "");
+if (i==7) break;
+y= y+height;
+}
+
+x = x+2.1*width;
+c1 = "CornflowerBlue";
+var kol = 5;
+
+for (i=1; i<=10;i++)
+{
+y=50;
+for (i1=1;i1<=7;i1++)
+{
+WriteTableRow(x,y,c1,c2,c3,width,height,paper,"Z"+i+i1);
+y= y+height;
+}
+x= x+width;
+}
+
+function scrup(ud){
+var x = 100;
+var y = 50;
+var height = 50;
+var width = 50;
+var c1 = "SaddleBrown";
+var c2 = "GhostWhite";
+var c3 = "Snow";
+var dw;
+
+for (i2=1;i2<=7;i++)
+{
+switch (i2) {
+case 1: dw = "MO";
+break
+case 2: dw = "TU";
+break
+case 3: dw = "WE";
+break
+case 4: dw = "TH";
+break
+case 5: dw = "FR";
+break
+case 6: dw = "SA";
+break
+case 7: dw = "SU";
+break
+}
+if (ud>1) {
+ud--
+} else
+{ud=31;}
+writetablerow(x,y,c1,c2,c3,width,height,paper,dw + "," + ud + "");
+if (i==7) break;
+y= y+height;
+}
+}
+
+function scrdown(){
+alert("Нажата Any Key")
+}
+
+function WriteTableRow(x,y,c1,c2,c3,width,height,paper,TDdata)
+{
+    var TD = TDdata.split(",");
+    for (j=0;j<TD.length;j++)
+    {
+        var rect = paper.rect(x,y,width,height).attr({"fill":c1,"stroke":c2});
+        paper.text(x+width/2, y+height/2, TD[j]).attr({"fill":c3}); 
+        x = x + width;
+    }
+}
+</script>
+
+</body>
+</html>
