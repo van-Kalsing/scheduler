@@ -11,7 +11,6 @@ container_element_id = container_element.attr("id");
 //   {source: "Kodak", target: "Apple"},
 //   {source: "Microsoft", target: "Barnes & Noble"},
 //   {source: "Microsoft", target: "Foxconn"},
-//   {source: "Apple", target: "HTC"},
 //   {source: "Microsoft", target: "Inventec"},
 //   {source: "Samsung", target: "Kodak"},
 //   {source: "LG", target: "Kodak"},
@@ -20,10 +19,8 @@ container_element_id = container_element.attr("id");
 //   {source: "Kodak", target: "LG"},
 //   {source: "Apple", target: "Nokia"},
 //   {source: "Qualcomm", target: "Nokia"},
-//   {source: "Apple", target: "Motorola"},
 //   {source: "Microsoft", target: "Motorola"},
 //   {source: "Motorola", target: "Microsoft"},
-//   {source: "Kodak", target: "Samsung"},
 //   {source: "Apple", target: "Samsung"},
 //   {source: "Kodak", target: "RIM"},
 //   {source: "Nokia", target: "Qualcomm"}
