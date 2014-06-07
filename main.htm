@@ -2,7 +2,7 @@
 
 <html>
 	<head>
-		<title>Сетевой график</title>
+		<title>Планировщик</title>
 		<meta charset="utf-8">
 		
 		<link href="styles/template.css" rel="stylesheet">
@@ -10,6 +10,7 @@
 		<link href="styles/LC.css" rel="stylesheet">
         
 		<script type="text/javascript" src="scripts/jquery.js"></script>
+		<script type="text/javascript" src="scripts/leanModal.js"></script>
 		<script type="text/javascript" src="scripts/d3.js"></script>
 		
 		<script type="text/javascript" src="scripts/pages/linear_calendar.js"></script>
@@ -17,37 +18,141 @@
 		<script type="text/javascript" src="scripts/pages/gantt_diagram.js"></script>
 		<script type="text/javascript" src="scripts/pages/burndown_chart.js"></script>
 		<script type="text/javascript" src="scripts/pages/works_categories.js"></script>
-		<script type="text/javascript" src="scripts/pages/create_work.js"></script>
 		
 		<script type="text/javascript" src="scripts/template.js"></script>
 	</head>
 	
 	<body>
 		<div id="page">
-			<div id="top_block">
-				<div id="top_menu">
+			<div id="modal_windows">
+				<div id="add_work" class="modal_window">
+					add_work
 				</div>
 				
-				<div id="search">
-					<input id="search_input" type="text" />
-					<input id="search_submit" type="button" value="Поиск" />
+				<div id="edit_work" class="modal_window">
+					edit_work
+				</div>
+				
+				<div id="remove_work" class="modal_window">
+					remove_work
+				</div>
+				
+				<div id="add_task" class="modal_window">
+					add_task
+				</div>
+				
+				<div id="edit_task" class="modal_window">
+					edit_task
+				</div>
+				
+				<div id="remove_task" class="modal_window">
+					remove_task
 				</div>
 			</div>
 			
-			<div id="main_block">
-				<div id="left_main_block">
-					<div id="selected_work">
-						<a id="selected_work_title" href="#">
-							Издание книги
-						</a>
-						
-						<div id="selected_work_reset">
-							<div id="selected_work_reset_icon"></div>
+			
+			
+			
+			
+			<div id="top_block">
+				<div id="general_toolbox" class="toolbox">
+					<div id="add_work_toolbox_item" class="toolbox_item">
+						<div class="enabled_toolbox_item_content">
+							<a id="add_work_trigger" href="#add_work">
+								Добавить работу
+							</a>
+						</div>
+						<div class="disabled_toolbox_item_content">
+							Добавить работу
 						</div>
 					</div>
 					
-					<div class="left_separator"></div>
 					
+					<div id="edit_work_toolbox_item" class="toolbox_item">
+						<div class="enabled_toolbox_item_content">
+							<a id="edit_work_trigger" href="#edit_work">
+								Редактировать задание
+							</a>
+						</div>
+						<div class="disabled_toolbox_item_content">
+							Редактировать работу
+						</div>
+					</div>
+					
+					
+					<div id="remove_work_toolbox_item" class="toolbox_item">
+						<div class="enabled_toolbox_item_content">
+							<a id="remove_work_trigger" href="#remove_work">
+								Удалить работу
+							</a>
+						</div>
+						<div class="disabled_toolbox_item_content">
+							Удалить работу
+						</div>
+					</div>
+				</div>
+				
+				
+				
+				<div id="individual_toolbox" class="toolbox">
+					<div id="add_task_toolbox_item" class="toolbox_item">
+						<div class="enabled_toolbox_item_content">
+							<a id="add_task_trigger" href="#add_task">
+								Добавить задание
+							</a>
+						</div>
+						<div class="disabled_toolbox_item_content">
+							Добавить задание
+						</div>
+					</div>
+					
+					
+					<div id="edit_task_toolbox_item" class="toolbox_item">
+						<div class="enabled_toolbox_item_content">
+							<a id="edit_task_trigger" href="#edit_task">
+								Редактировать задание
+							</a>
+						</div>
+						<div class="disabled_toolbox_item_content">
+							Редактировать задание
+						</div>
+					</div>
+					
+					
+					<div id="remove_task_toolbox_item" class="toolbox_item">
+						<div class="enabled_toolbox_item_content">
+							<a id="remove_task_trigger" href="#remove_task">
+								Удалить задание
+							</a>
+						</div>
+						<div class="disabled_toolbox_item_content">
+							Удалить задание
+						</div>
+					</div>
+				</div>
+<!-- 				<div id="selected_work">
+					<a id="selected_work_title" href="#">
+						Издание книги
+					</a>
+					
+					<div id="selected_work_reset">
+						<div id="selected_work_reset_icon"></div>
+					</div>
+				</div>
+ --><!-- 				<div id="top_menu">
+					<a id="add_work_menu_item"
+							class="top_menu_item" href="#edit_work">
+						Добавить работу
+					</a>
+				</div> -->
+			</div>
+			
+			
+			
+			
+			
+			<div id="main_block">
+				<div id="left_main_block">
 					<div id="left_menu">
 						<a id="table_calendar_menu_item"
 								class="left_menu_item" href="#">
@@ -66,22 +171,16 @@
 						
 						<div class="left_menu_separator"></div>
 						
-						<a id="create_work_menu_item"
-								class="left_menu_item" href="#">
-							Новая работа
-						</a>
-						<div class="left_menu_separator"></div>
-
 						<a id="linear_calendar_menu_item"
 							class="left_menu_item" href="#">
 						Линейный календарь
 					</a>
-
+					
 					<a id="works_categories_menu_item"
 							class="left_menu_item" href="#">
 						Категории работ
 					</a>
-
+					
 					</div>
 					</div>
 				</div>

@@ -1,4 +1,8 @@
-function render_gantt_diagram(container_element) {
+function render_gantt_diagram(interface_control) {
+  interface_control.set_add_task_status(true);
+  
+  var container_element = interface_control.get_container();
+  
   container_element.html("");
 	container_element_id = container_element.attr("id");
   

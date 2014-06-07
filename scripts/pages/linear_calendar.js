@@ -153,7 +153,11 @@ function scrdown(dayn) {
   });
 }
 
-function render_linear_calendar(container_element) {
+function render_linear_calendar(interface_control) {
+    interface_control.set_add_work_status(true);
+    
+    var container_element = interface_control.get_container();
+    
     e = container_element;
     container_element.html("<button style='position: relative; left: 0px; top: 20px;" 
         + " height: 20px; width: 350px', onclick='scrup(-7)'>Вверх</button> <button style='position: relative; left: 0px; top: 250px; height: 20px; width: 350px', onclick='scrup(7)'>Вниз</button>");

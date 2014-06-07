@@ -1,4 +1,8 @@
-function render_works_categories(container_element) {
+function render_works_categories(interface_control) {
+interface_control.set_add_work_status(true);
+
+var container_element = interface_control.get_container();
+
 container_element_id = container_element.attr("id");
 	
 // var links = [
