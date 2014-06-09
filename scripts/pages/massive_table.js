@@ -18,6 +18,11 @@ function render_table_calendar(container_element) {
 		for (var j=0;j<7;++j) {
 			var cell = row.append("td");
 			cell.text(grid[i][j]);
+		//	date.getTime()-(date.getDay()*24*60*60*1000);
+			//var date =
+		//	npmDate (ms);
+		//	for (i=0;i<35;++i)
+			
 		}
 	}
 }
